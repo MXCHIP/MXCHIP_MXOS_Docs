@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>3.Basic AT Command Usage Demo - Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="./3.Basic AT Command Usage Demo - Document_files/vue.css">
+</head>
+<body data-page="docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B.md" class="ready sticky">
+  <section class="cover" style="background: linear-gradient(to left bottom, hsl(26, 100%, 85%) 0%,hsl(93, 100%, 85%) 100%)"><div class="cover-main"><h1 id="mxchip-technical-documents-center"><a href="https://en.docs.mxchip.com/#/?id=mxchip-technical-documents-center" data-id="mxchip-technical-documents-center" class="anchor"><span>MXCHIP Technical Documents Center</span></a></h1><p>@ MXCHIP 2019</p><p>( Please Pull up for more content. )</p></div><div class="mask"></div></section><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><div class="sidebar-nav"><ul><li><p><strong><a href="https://en.docs.mxchip.com/#/docs/README">Main Page</a></strong></p></li><li><p><strong>About mxos</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxos/1.Guide">1.Guide</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/2.mxos_brief_introduction">2.MXOS Brief Introduction</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/3.mxos_components">3.MXOS Components</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board">4.MXOS Development Board</a></li></ul></li></ul><ul><li><strong>Development Tools</strong><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/1.Guide">1.Guide</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/2.mxos_Cube">2.MXOS Cube</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/3.mxos_IDE">3.MXOS IDE</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/4.JTAG_debugger">4.JTAG Debugger</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/5.Serial_debug_terminal">5.Serial Debug Terminal</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/6.Third_party_driver">6.Third Party Driver</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/7.Helloworld">7.Helloworld</a></li></ul></li></ul><ul><li><p><strong>MXOS System Characteristics</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/1.Bootloader">1.Bootloader Mode</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/2.CLI">2.CLI Serial Debug Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/3.Kernel_API">3.Kernel API</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/4.Core_data">4.Core Data Management</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/5.WiFi_configuration">5.WiFi Configuration</a></li></ul></li><li><p><strong>MXOS API Description</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/0.HAL">0.Hardware Abstract Layer</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/1.Socket">1.Socket Communication</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/2.Http">2.Http Communication</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/3.Json_parsing">3.Json Format Parsing</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/4.Security_algorithm">4.Security Algorithm</a></li></ul></li><li><p><strong>WiFi／BT AT Command</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/AT/0.%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD">0.Firmware download</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/1.%E5%9B%BA%E4%BB%B6%E8%AF%B4%E6%98%8E">1.Firmware description</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E">2.Command description</a></li><li class="active"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B">3.Basic AT Command Usage Demo</a><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=table-of-contents">Table of contents</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1at-firmware-update-by-serial-port">1.AT firmware update by serial port</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-hardware-preperation">1) Hardware preperation</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-software-preparation">2) Software preparation</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_3-update-step">3) Update step</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2working-mode-switching">2.Working mode switching</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-at-command-mode-to-transparent-mode">1) AT command mode  to transparent mode</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-transmit-mode-to-at-command-mode">2) Transmit mode to AT command mode</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_3wifi-function-use-case">3.WiFi function use case</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-start-ap-mode">1) Start AP mode</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-start-station-mode">2) Start STATION mode</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_4ota-function">4.OTA function</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_5socket-communication-use-case">5.Socket communication use case</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-tcp-server-side">1) TCP server side</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-tcp-client">2) TCP Client</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_3-udp-broadcast">3) UDP broadcast</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_4-udp-unicast">4) UDP unicast</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_6easylink-distribution-network">6.Easylink Distribution Network</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_7airkiss-distribution-network">7.Airkiss Distribution Network</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_8get-sntp-time">8.Get SNTP time</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_9get-rtc-time">9.Get RTC time</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_10mqtt-protocol-communication-use-case">10.MQTT protocol communication use case</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-implementing-mqtt-communication-with-qingke-fog-cloud">1) Implementing mqtt communication with Qingke Fog Cloud</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-implementing-mqtt-communication-with-amazon-aws-cloud">2) Implementing mqtt communication with Amazon aws cloud</a></li></ul></ul></li></ul></li></ul><ul><li><strong>BLE AT Command</strong><ul><li><strong>EMB1061/EMB1060 AT</strong><ul><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/0.Firmware_download">0.Firmware Download</a></li><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/1.Firmware_description">1.Firmware Description</a></li><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/2.Command_description">2.Command Description</a></li></ul></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="basic-instruction-use-case"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=basic-instruction-use-case" data-id="basic-instruction-use-case" class="anchor"><span>Basic instruction use case</span></a></h1><p>This article will detail how to update the AT application firmware; how to implement the working mode switching; how to open the different working modes of the module's WiFi function; and how to establish a Socket connection and communication. </p><h2 id="table-of-contents"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=table-of-contents" data-id="table-of-contents" class="anchor"><span>Table of contents</span></a></h2><ol><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=attransparenttransmissionfirmwareserialportupdate">AT firmware update by serial port</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=workingmodeswitching">Working mode switching</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=wififunctionusecase">WiFi function use case</a><ol><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=startapmode">Start AP Mode</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=startstationmode">Start Station Mode</a></li></ol></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=attransparentfirmwareotaupdate">OTA function</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=socketcommunicationusecase">Socket communication use case</a><ol><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=tcpserverside">TCP server side</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=tcpclient">TCP client</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=udpbroadcast">UDP broadcast (server side)</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=udpunicast">UDP Unicast (Client)</a></li></ol></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=easylinkdistributionnetwork">Easylink distribution network</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=airkissdistributionnetwork">Airkiss Distribution Network</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=getsntptime">Get SNTP Time</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=getrtctime">Get RTC Time</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=mqttprotocolcommunicationusecase">MQTT protocol communication use case</a><ol><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1andqingkefogcloudrealizemqttcommunication">MQtt communication with Qingke Fog cloud</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2andamazonawscloudtoachievemqttcommunication">Maqtt communication with Amazon aws cloud</a></li></ol></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=btbluetoothcommunicationexample">BT Bluetooth Communication Example</a></li></ol><h2 id="_1at-firmware-update-by-serial-port"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1at-firmware-update-by-serial-port" data-id="_1at-firmware-update-by-serial-port" class="anchor"><span>1.AT firmware update by serial port</span></a></h2><p>Update method: Enter Bootloader mode, enter command 1 and download through the user serial port. </p><h3 id="_1-hardware-preperation"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-hardware-preperation" data-id="_1-hardware-preperation" class="anchor"><span>1) Hardware preperation</span></a></h3><p>First, you need to have a hardware environment in which the module can run normally. It can be any of the following：</p><ul><li>MiCOKit or MXKit-xxxx  development board，among them：<ul><li>The current MiCOKit support module includes：EMW3165，3166，3239，3031，3081。</li><li>MXKit support module includes：EMW3080，3060，110，3090，3290。</li></ul></li><li>Or the minimum working circuit of your own EMWxxx module (including at least: power, serial port, and reset button functions. If you need to burn through the serial port, you need to solve the boot mode status button: BOOT, Status two).</li></ul><p>The connection diagram and port are as follows：</p><ul><li>(1）MiCOKit-xxx，</li></ul><p><img src="./3.Basic AT Command Usage Demo - Document_files/user-uart.png" data-origin="image/6.at_demo/user-uart.png" alt="user-uart"> </p><p>The ports in Device Manager are as follows：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/micokit-usbuart.png" data-origin="image/6.at_demo/micokit-usbuart.png" alt="micokit-usbuart"> </p><ul><li>(2）If it is MXKit-xxx, the user serial port and the debug serial port are combined. (Note: the short connector of RXD and TXD should be plugged in.)</li></ul><p><img src="./3.Basic AT Command Usage Demo - Document_files/mxkit-uart.png" data-origin="image/6.at_demo/mxkit-uart.png" alt="mxkit-uart"> </p><p>The ports in Device Manager are as follows：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/mxkit-usbuart.png" data-origin="image/6.at_demo/mxkit-usbuart.png" alt="micokit-usbuart"> </p><p>Note: To use the Arduino user serial port of the MXKit development board, you need to unplug the short connector of RXD and TXD, and need to connect ttl to usb small board. For specific usage and port number display, please refer to MiCOKit.</p><h3 id="_2-software-preparation"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-software-preparation" data-id="_2-software-preparation" class="anchor"><span>2) Software preparation</span></a></h3><ul><li>(1)  Corresponds to the <a href="https://en.docs.mxchip.com/#/docs/AT/0.%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD">AT firmware of the WiFi module</a>, for example: EMW3xxx_0000.xxxx.xxxx_ota.bin.</li><li>(2)  Firmware download software: <a href="https://www.vandyke.com/download/securecrt/download.html" target="_blank" rel="noopener">SecureCRT</a>.</li><li>(3)  AT command serial debugging software: <a href="http://www.geshe.com/zh-cn/products/gbeacon" target="_blank" rel="noopener">Gersey bonfire</a>.</li><li>(4)) Here is a Geshe Bonfire bsp project file that integrates the basic AT command: <a href="http://docs.mxchip.com/docs/AT/bsp/at_v2.0_cmd.bsp.zip" target="_blank" rel="noopener">AT v2.0_CMD.bsp</a>, , can be downloaded directly.</li><li>(5)  Simultaneously provide FOG cloud connection via MQTT protocol. Related AT instruction: <a href="http://docs.mxchip.com/docs/AT/bsp/at_cmd_fog_mqtt.bsp.zip" target="_blank" rel="noopener">at_cmd_fog_mqtt.bsp</a>
+And AWS Amazon Cloud <a href="http://docs.mxchip.com/docs/AT/bsp/at_cmd_aws_mqtt.bsp.zip" target="_blank" rel="noopener">at_cmd_aws_mqtt.bsp</a>.</li><li>(6) Each demo sample instruction set bsp project in this document can be downloaded: <a href="http://docs.mxchip.com/docs/AT/bsp/at_all_demo.bsp.zip" target="_blank" rel="noopener">at_all_demos.bsp</a></li></ul><h3 id="_3-update-step"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_3-update-step" data-id="_3-update-step" class="anchor"><span>3) Update step</span></a></h3><h4 id="_1-connecting-serial-port"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-connecting-serial-port" data-id="_1-connecting-serial-port" class="anchor"><span>(1) Connecting serial port</span></a></h4><p>Connect the debug serial port of the development board and the user serial port to the PC through the microusb line or ttl to the usb board.</p><p>In the PC's Control Panel - Device Manager finds the COM port number, opens secureCRT, creates the connection, and configures it as follows:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/com_config.png" data-origin="image/6.at_demo/com_config.png" alt="com_config"> </p><h4 id="_2-enter-bootloader-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-enter-bootloader-mode" data-id="_2-enter-bootloader-mode" class="anchor"><span>(2) Enter Bootloader mode</span></a></h4><p>BOOT pin pulls low 0, STATUS pin pulls high 1, RESET pulls low, restarts the module, serial output log as shown below：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/boot_v3.4.png" data-origin="image/6.at_demo/boot_v3.4.png" alt="bootloader"> </p><h4 id="（3）download-firmware"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=%ef%bc%883%ef%bc%89download-firmware" data-id="（3）download-firmware" class="anchor"><span>（3）Download firmware</span></a></h4><p>Input：1，Update application. Return as shown below：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/order_1.png" data-origin="image/6.at_demo/order_1.png" alt="command_1"> </p><p>In particular, the Model 3060 module needs to be programmed using the dedicated instructions in boot mode, as shown below.：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/3060_ota_update.png" data-origin="image/6.at_demo/3060_ota_update.png" alt="3060_ota_update.png"> </p><p>At this point, select the menu bar: Transfer - Send Ymodem, select the ota.bin firmware to add in the download list,and choose OK, as shown below：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/add-otabin.png" data-origin="image/6.at_demo/add-otabin.png" alt="choose_bin"> </p><p>After the download is successful, the output is as follows。</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/otabin-ok.png" data-origin="image/6.at_demo/otabin-ok.png" alt="download_ok"> </p><p>Can enter QC mode, user serial port view burning firmware version result： </p><p>Method to entry QC mode :</p><ul><li>One is BOOT pin to pull low, STATUS is low, reset, baud rate：921600bps。 (such as EMW3060,3165,3166,3239,3031, etc.)</li><li>One is the user serial port input #, Reset, baud rate：921600bps。（such as: EMW3080）</li></ul><p>QC log as below：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/qc_log.png" data-origin="image/6.at_demo/qc_log.png" alt="download_ok"> </p><p>At this time, the BOOT pin can be pulled high, the STATUS pin is pulled high, and then reset to enter the normal working mode, that is, the AT command mode or the data transparent transmission mode.</p><h2 id="_2working-mode-switching"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2working-mode-switching" data-id="_2working-mode-switching" class="anchor"><span>2.Working mode switching</span></a></h2><h3 id="_1-at-command-mode-to-transparent-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-at-command-mode-to-transparent-mode" data-id="_1-at-command-mode-to-transparent-mode" class="anchor"><span>1) AT command mode  to transparent mode</span></a></h3><p>In the AT command mode, the user serial input command: <code>AT+CIPSENDRAW\r</code>, return: <code>OK</code>, you can exit the AT command mode and enter the data transparent transmission mode.</p><h3 id="_2-transmit-mode-to-at-command-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-transmit-mode-to-at-command-mode" data-id="_2-transmit-mode-to-at-command-mode" class="anchor"><span>2) Transmit mode to AT command mode</span></a></h3><p>In the transparent transmission mode, the user serial input command: <code>+++</code>, return: <code>OK</code>, you can exit the transparent transmission mode and enter the AT command mode.</p><p>Specific command input, as shown below.</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/atcipsendraw.png" data-origin="image/6.at_demo/atcipsendraw.png" alt="at_quit"> </p><h2 id="_3wifi-function-use-case"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_3wifi-function-use-case" data-id="_3wifi-function-use-case" class="anchor"><span>3.WiFi function use case</span></a></h2><h3 id="_1-start-ap-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-start-ap-mode" data-id="_1-start-ap-mode" class="anchor"><span>1) Start AP mode</span></a></h3><p>In the AT command mode, enter the following command through the “user serial port” to enable the module to start the Soft_AP mode. The steps are as follows:</p><table>
+<thead>
+<tr>
+<th align="left">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Enter AT Command Mode</td>
+<td align="left"><code>+++</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Set module Soft_AP name and start</td>
+<td align="left"><code>AT+WSAP=jenny,12345678\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Query whether Soft_AP was successfully created</td>
+<td align="left"><code>AT+WSAPS\r</code></td>
+<td align="left"><code>+WSAPS:ESTABLISHED\r\nOK</code></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Query Module IP Address</td>
+<td align="left"><code>AT+WSAPIP?\r</code></td>
+<td align="left"><code>WSAPIP:10.10.10.100,255.255.255.0,10.10.10.1</code></td>
+</tr>
+</tbody></table>
+<p>AP mode setting serial port tool log output as shown below：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_log.png" data-origin="image/6.at_demo/ap_log.png" alt="ap_log"> </p><h3 id="_2-start-station-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-start-station-mode" data-id="_2-start-station-mode" class="anchor"><span>2) Start STATION mode</span></a></h3><p>In the AT command mode, enter the following command through the “user serial port” to enable the module to start the STATION mode. The steps are as follows:</p><table>
+<thead>
+<tr>
+<th align="left">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Set AP name and password for module access</td>
+<td align="left"><code>AT+WJAP=SWYANG,yangbatian2015\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Query if the AP is successfully connected</td>
+<td align="left"><code>AT+WJAPS\r</code></td>
+<td align="left"><code>+WJAPS:CONNECTED\r\nOK</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">View module's IP address</td>
+<td align="left"><code>AT+WJAPIP?\r</code></td>
+<td align="left"><code>+WJAPIP:192.168.31.67,255.255.255.0,192.168.31.1</code></td>
+</tr>
+</tbody></table>
+<p>The station mode sets the serial port log output as shown below:
+<img src="./3.Basic AT Command Usage Demo - Document_files/sta_log.png" data-origin="image/6.at_demo/sta_log.png" alt="sta_log"></p><h2 id="_4ota-function"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_4ota-function" data-id="_4ota-function" class="anchor"><span>4.OTA function</span></a></h2><p>To enter the AT command mode, the device must first connect to the AP to ensure networked communication, and then perform an online firmware update by sending OTA queries and updated AT commands. The specific steps and instructions are as follows:</p><table>
+<thead>
+<tr>
+<th align="left">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Enter AT Command Mode</td>
+<td align="left"><code>+++</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Startup Module</td>
+<td align="left"><code>AT+REBOOT\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Set module STATION mode, and access AP information</td>
+<td align="left"><code>AT+WJAP=Xiaomi.Router, stm32f215\r</code></td>
+<td align="left"><code>OK</code>,<code>+WEVENT:STATION_UP</code></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Query cloud updateable AT firmware version</td>
+<td align="left"><code>AT+OTACHECK\r</code></td>
+<td align="left"><code>+OTACHECK:fog_v3_AT_v2.0.3</code>, <code>OK</code></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Start to update the AT firmware with the specified version number</td>
+<td align="left"><code>AT+OTASTART=fog_v3_AT_v2.0.3</code></td>
+<td align="left"><code>OK</code>, and then the notification message: <code>+OTAEVENT:START</code> , <code>+OTAEVENT:SUCCESS</code>, then restart, appears: <code>+WEVENT: STATION_UP</code>.</td>
+</tr>
+</tbody></table>
+<p>The specific steps refer to the following figure：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ota_log.png" data-origin="image/6.at_demo/ota_log.png" alt="ota_log"> </p><h2 id="_5socket-communication-use-case"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_5socket-communication-use-case" data-id="_5socket-communication-use-case" class="anchor"><span>5.Socket communication use case</span></a></h2><h3 id="_1-tcp-server-side"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-tcp-server-side" data-id="_1-tcp-server-side" class="anchor"><span>1) TCP server side</span></a></h3><h4 id="_1-in-ap-mode-the-module-is-a-tcp-server"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-in-ap-mode-the-module-is-a-tcp-server" data-id="_1-in-ap-mode-the-module-is-a-tcp-server" class="anchor"><span>(1) In AP mode, the module is a TCP server.</span></a></h4><p>The module acts as a TCP server in Soft_AP mode and establishes a TCP connection and communication with the TCP client on the PC side. Proceed as follows:</p><table>
+<thead>
+<tr>
+<th align="left">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Set and turn on Soft_AP mode</td>
+<td align="left"><code>AT+WSAP=jenny,12345678\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Query Module IP Address</td>
+<td align="left"><code>AT+WSAPIP?\r</code></td>
+<td align="left"><code>+WSAPIP=10.10.10.1,255.255.255.0,10.10.10.1</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">PC Connect to the module-initiated AP</td>
+<td align="left">PC-side Wlan list to find AP:<code>jenny</code>, and connect</td>
+<td align="left">Successful connection</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Setup module to do TCP Server</td>
+<td align="left"><code>AT+CIPSTART=0,tcp_server,8080\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">PC from TCP client and connection</td>
+<td align="left">Target IP: 10.10.10.1, destination port: 8080, no local port specified</td>
+<td align="left">connection succeeded. <code>+CIPEVENT=CLIENT,CONNECTED,10.10.10.2,54849</code></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">AT command mode, the module sends data to the TCP client through the serial port</td>
+<td align="left"><code>AT+CIPSEND=0,54849,5\r12345</code></td>
+<td align="left">TCP client receiving area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">AT command mode, TCP client sends data to the module serial port</td>
+<td align="left">1. TCP tool send area sends: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, you need to enter the command: <code>AT+CIPRECV=0,54849\r</code> for data reception</td>
+<td align="left"><code>+CIPRECV: 10,1234567890\r\nOK</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required for data reception.</td>
+<td align="left">Module serial port received: <code>1234567890</code></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">In transparent mode, the module sends data to the TCP client through the serial port</td>
+<td align="left">1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">2. Serial input: <code>abcdefghijklmn</code></td>
+<td align="left">PC-side TCP client received: <code>abcdefghijklmn</code></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Transparent mode, TCP client sends data to module serial port</td>
+<td align="left">TCP client send area input data: <code>1234567890</code></td>
+<td align="left">Module serial port received: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>The PC uses the TCP/UDP test software to create a TCP client, as shown below.：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_tcpclient_creat.png" data-origin="image/6.at_demo/ap_tcpclient_creat.png" alt="ap_tcpclient_creat"> </p><p>The TCP/UDP test software workspace is as follows：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_pc_tcpclient.png" data-origin="image/6.at_demo/ap_pc_tcpclient.png" alt="ap_pc_tcpclient"> </p><p>The data receiving work area information of the serial port debugging software is as follows：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_server.png" data-origin="image/6.at_demo/ap_server.png" alt="ap_tcpserver_log"> </p><hr>
+<h4 id="_2-in-station-mode-the-module-is-a-tcp-server"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-in-station-mode-the-module-is-a-tcp-server" data-id="_2-in-station-mode-the-module-is-a-tcp-server" class="anchor"><span>(2) In STATION mode, the module is a TCP server.</span></a></h4><p>The module is in the STATION mode, acts as a TCP server, and establishes a TCP connection, and communicates. Specific steps are as follows:</p><table>
+<thead>
+<tr>
+<th align="left">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Set and turn on STATION mode</td>
+<td align="left"><code>AT+WJAP=William Xu,mx099555\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Query module IP address</td>
+<td align="left"><code>AT+WJAPIP?\r</code></td>
+<td align="left"><code>+WSAPIP=10.0.1.45,255.255.255.0,10.10.10.1</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Module settings TCP SERVER parameters</td>
+<td align="left"><code>AT+CIPSTART=0, tcp_server,8080\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">PC from tcp client</td>
+<td align="left">PC WLAN connected to Willam Xu, TCP/UDP debugging tool from a TCP client, target IP: 10.0.1.45, port number: 8080, and connection</td>
+<td align="left">connection succeeded. <code>+CIPEVENT=CLIENT , CONNECTED, 10.0.1.41, 53594</code></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">AT command mode, the module sends data to the TCP client through the serial port</td>
+<td align="left"><code>AT+CIPSEND=0,53594,5\r12345</code></td>
+<td align="left">TCP client receive area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">AT command mode, TCP client sends data to the module serial port</td>
+<td align="left">1. TCP tool send area sends: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, then enter the command: <code>AT+CIPRECV=0,53594\r</code></td>
+<td align="left"><code>+CIPRECV:10,1234567890\r\nOK</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required.</td>
+<td align="left">The module serial port receives: <code>1234567890</code></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">In transparent mode, the module sends data to the TCP client through the serial port</td>
+<td align="left">1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">2. Serial input: <code>abcdefghijklmn</code></td>
+<td align="left">PC-side TCP client received: <code>abcdefghijklmn</code></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Transparent mode, TCP client sends data to module serial port</td>
+<td align="left">TCP client send area input data: <code>1234567890</code></td>
+<td align="left">Module serial port received: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>The PC uses the TCP/UDP test software to create a TCP client, as shown below:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_tcpclient_creat.png" data-origin="image/6.at_demo/sta_tcpclient_creat.png" alt="sta_tcpclient_creat"> </p><p>TCP/UDP test software workspace：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_pc_tcpserver.png" data-origin="image/6.at_demo/sta_pc_tcpserver.png" alt="sta_tcpserver_log"> </p><p>The right side is the data receiving work area of the serial debugging software.</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_tcpserver_log.png" data-origin="image/6.at_demo/sta_tcpserver_log.png" alt="sta_tcpserver_log"> </p><hr>
+<h3 id="_2-tcp-client"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-tcp-client" data-id="_2-tcp-client" class="anchor"><span>2) TCP Client</span></a></h3><p>When you need a module to be a TCP client and create a TCP link for TCP communication, you can refer to the following steps:</p><h4 id="_1-in-ap-mode-the-module-is-a-tcp-client"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-in-ap-mode-the-module-is-a-tcp-client" data-id="_1-in-ap-mode-the-module-is-a-tcp-client" class="anchor"><span>(1) In AP mode, the module is a TCP client.</span></a></h4><p>In AP mode, the module acts as a TCP client, establishes a TCP connection, and communicates. Proceed as follows:</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Set and turn on Soft_AP mode</td>
+<td align="left"><code>AT+WSAP=jenny,12345678\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">PC connects to the AP and obtains the IP address</td>
+<td align="left">PC side Wlan connects to <code>jenny</code>; PC opens cmd.exe and enters the command: <code>ipconfig</code>.</td>
+<td align="left">Successfully connect jenny, PC's IP address: 10.10.10.2</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Set module to do tcp client parameters</td>
+<td align="left"><code>AT+CIPSTART=1, tcp_client,10.10.10.2,20001\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">PC from TCP server and automatically connect</td>
+<td align="left">Set the local port number: 20001</td>
+<td align="left">Automatically connect with the module's tcp client. <code>+CIPEVENT:1,SERVER,CONNECTED</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">AT command mode, the module sends data to the TCP client through the serial port</td>
+<td align="left"><code>AT+CIPSEND=1,5\r12345</code></td>
+<td align="left">TCP client receive area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left">AT command mode, TCP client sends data to the module serial port</td>
+<td align="left">1. TCP tool send area sends: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, enter the command: <code>AT+CIPRECV=1\r</code></td>
+<td align="left"><code>+CIPRECV:10,1234567890\r\ nOK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required.</td>
+<td align="left">The module serial port receives: <code>1234567890</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left">In transparent mode, the module sends data to the TCP client through the serial port</td>
+<td align="left">1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. Serial input: <code>abcdefghijklmn</code></td>
+<td align="left">PC-side TCP client received: <code>abcdefghijklmn</code></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left">Transparent mode, TCP client sends data to module serial port</td>
+<td align="left">TCP client send area input data: <code>1234567890</code></td>
+<td align="left">Module serial port received: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>The PC uses the TCP/UDP test software to create a TCP server to communicate with the module TCP client. For details, please refer to the following figure.</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_pc_tcpserver_creat.png" data-origin="image/6.at_demo/ap_pc_tcpserver_creat.png" alt="ap_pc_tcpserver"></p><p>The TCP/UDP test software workspace is as follows:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_pc_tcpserver.png" data-origin="image/6.at_demo/ap_pc_tcpserver.png" alt="ap_pc_tcpserver"></p><p>The data transmission and reception work area of the serial port debugging software is as follows:
+<img src="./3.Basic AT Command Usage Demo - Document_files/ap_tcpclient_log.png" data-origin="image/6.at_demo/ap_tcpclient_log.png" alt="ap_tcpclient.png"> </p><hr>
+<h4 id="_2-tcp-client-in-station-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-tcp-client-in-station-mode" data-id="_2-tcp-client-in-station-mode" class="anchor"><span>(2) TCP client in STATION mode</span></a></h4><p>In STATION mode, the module acts as a TCP client, establishes a TCP connection, and communicates. Specific steps are as follows:</p><blockquote>
+<p>Note: Please make sure that the current id connection is disconnected, and then set it. Otherwise, an error will be reported.</p></blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Set and start STATION mode, wait for the connection to succeed</td>
+<td align="left"><code>AT+WJAP=Willam Xu,mx099555\r</code></td>
+<td align="left"><code>OK</code> <code>+WEVNET:STATION UP</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">PC connects to Willam Xu and obtains the IP address</td>
+<td align="left">PC side Wlan connects to <code>Willam Xu</code>; PC opens cmd.exe and enters the command: <code>ipconfig</code>.</td>
+<td align="left">Successfully connected to Willam Xu, PC's IP address: 10.0.1.45</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Set module to do tcp client parameters</td>
+<td align="left"><code>AT+CIPSTART=1, tcp_client, 10.0.1.48, 20001\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">PC from the TCP server and automatically connect</td>
+<td align="left">Set the local port number: 20001</td>
+<td align="left">The connection to the module's tcp client is successful. <code>+CIPEVENT: 1, SEVER, CONNECTED</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">AT command mode, the module sends data to the TCP client through the serial port</td>
+<td align="left"><code>AT+CIPSEND=1,5\r12345</code></td>
+<td align="left">TCP client receive area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left">AT command mode, TCP client sends data to the module serial port</td>
+<td align="left">1. TCP tool send area sends: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, enter the command: <code>AT+CIPRECV=1\r</code></td>
+<td align="left"><code>+CIPRECV:10,1234567890\r\ nOK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required.</td>
+<td align="left">The module serial port receives: <code>1234567890</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left">In transparent mode, the module sends data to the TCP client through the serial port</td>
+<td align="left">1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. Serial input: <code>abcdefghijklmn</code></td>
+<td align="left">PC-side TCP client received: <code>abcdefghijklmn</code></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left">Transparent mode, TCP client sends data to module serial port</td>
+<td align="left">TCP client send area input data: <code>1234567890</code></td>
+<td align="left">Module serial port received: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>Create a TCP server using TCP/UDP test software to communicate with the TCP client of the module, as shown in the figure below.</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_pc_tcpserver_creat.png" data-origin="image/6.at_demo/sta_pc_tcpserver_creat.png" alt="sta_pc_tcpserver_creat"> </p><p>PC-side TCP/UDP test software data transceiver work area:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_pc_tcpserver.png" data-origin="image/6.at_demo/sta_pc_tcpserver.png" alt="sta_pc_tcpserver"> </p><p>Serial debugging software data transceiver work area：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_tcpclient_log.png" data-origin="image/6.at_demo/sta_tcpclient_log.png" alt="sta_tcpclient.png"> </p><hr>
+<h3 id="_3-udp-broadcast"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_3-udp-broadcast" data-id="_3-udp-broadcast" class="anchor"><span>3) UDP broadcast</span></a></h3><p>When you need a module to do UDP broadcast (server side) and send UDP broadcast information concurrently, you can refer to the following steps.</p><h4 id="_1-udp-broadcast-in-ap-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-udp-broadcast-in-ap-mode" data-id="_1-udp-broadcast-in-ap-mode" class="anchor"><span>(1) )UDP broadcast in AP mode</span></a></h4><p>In AP mode, the module establishes a UDP broadcast service (server side) and sends UDP broadcast information. Specific steps are as follows:</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Set and turn on Soft_AP mode</td>
+<td align="left"><code>AT+WSAP=jenny,12345678\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">PC connects to the AP and obtains the IP address</td>
+<td align="left">PC side Wlan connects to <code>jenny</code>; PC opens cmd.exe and enters the command: <code>ipconfig</code>.</td>
+<td align="left">Successfully connect jenny, PC's IP address: 10.10.10.2</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Setup Parameters UDP Broadcast Service Parameters</td>
+<td align="left"><code>AT+CIPSTART=2,udp_broadcast,10.10.10.255,20001,4001\r</code></td>
+<td align="left"><code>OK</code> Return notification <code>+CIPEVENT:2,UDP,CONNECTED</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">PC from UDP client and connect</td>
+<td align="left">Set destination Port port number: 4001, local port number: 20001</td>
+<td align="left">Automatic connection to module successfully.</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">AT command mode, the module sends data to the UDP server through the serial port</td>
+<td align="left"><code>AT+CIPSEND=2,5\12345</code></td>
+<td align="left">TCP client receiving area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left">AT command mode, UDP client sends data to the module serial port</td>
+<td align="left">1. Send area send: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, enter the command: <code>AT+CIPRECV=1\r</code></td>
+<td align="left"><code>+CIPRECV:10,1234567890\r\ nOK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required.</td>
+<td align="left">The module serial port receives: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>|7 |In transparent mode, the module sends data to the UDP server through the serial port|1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;|<code>OK</code> |
+| | |2. Serial input: <code>abcdefghijklmn</code>|PC-side UDP client received: <code>abcdefghijklmn</code> |
+|8 | Transparent mode, UDP client sends data to module serial port | UDP client send area input data: <code>1234567890</code> | module serial port received: <code>1234567890</code> |</p><p>Create a UDP broadcast connection on the PC using TCP/UDP test software, and perform UDP communication with the module. For details, please refer to it.</p><p>The PC-side UDP connection is created as follows:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_pc_udpbroadcast_creat.png" data-origin="image/6.at_demo/ap_pc_udpbroadcast_creat.png" alt="ap_pc_udpboardcast"> </p><p>PC-side TCP/UDP test software data transceiver work area: </p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_pc_udpbroadcast.png" data-origin="image/6.at_demo/ap_pc_udpbroadcast.png" alt="ap_pc_udpboardcast"> </p><p>Serial debugging software data transceiver work area</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_udpbroadcast_log.png" data-origin="image/6.at_demo/ap_udpbroadcast_log.png" alt="ap_udpboardcast_log.png"> </p><h4 id="_2-udp-broadcast-in-station-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-udp-broadcast-in-station-mode" data-id="_2-udp-broadcast-in-station-mode" class="anchor"><span>(2) UDP broadcast in STATION mode</span></a></h4><p>In STATION mode, a UDP server is set up, and the module sends UDP broadcast information. Specific steps are as follows:</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Set and start STATION mode, wait for the connection to succeed</td>
+<td align="left"><code>AT+WJAP=MX,88888880\r</code></td>
+<td align="left"><code>OK</code> <code>+WEVNET:STATION UP</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">PC connects to Willam Xu and obtains the IP address</td>
+<td align="left">PC side Wlan connects to <code>MX</code>; PC side opens cmd.exe, enter the command: <code>ipconfig</code>.</td>
+<td align="left">Successfully connected to Willam Xu, PC's IP address: <code>192.168.100.118</code></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Set the module to do UDP server-side parameters</td>
+<td align="left"><code>AT+CIPSTART=2, udp_broadcast, 192.168.100.255, 20001,4001\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">PC from UDP client and connect</td>
+<td align="left">Set destination port Port number: 4001, local port number: 20001</td>
+<td align="left">Successful connection with module udp broadcast. <code>+CIPEVENT: 2, UDP, CONNECTED</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">AT command mode, the module sends data to the UDP client through the serial port</td>
+<td align="left"><code>AT+CIPSEND=2,5\r12345</code></td>
+<td align="left">TCP client receive area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left">AT command mode, UDP client sends data to the module serial port</td>
+<td align="left">1. TCP tool send area sends: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, enter the command: <code>AT+CIPRECV=1\r</code></td>
+<td align="left"><code>+CIPRECV:10,1234567890\r\ nOK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required.</td>
+<td align="left">The module serial port receives: <code>1234567890</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left">In transparent mode, the module sends data to the UDP client through the serial port</td>
+<td align="left">1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. Serial input: <code>abcdefghijklmn</code></td>
+<td align="left">PC-side UDP client received: <code>abcdefghijklmn</code></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left">Transparent mode, UDP client sends data to module serial port</td>
+<td align="left">UDP client send area input data: <code>1234567890</code></td>
+<td align="left">module serial port received: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>Create a UDP broadcast connection on the PC using TCP/UDP test software, and perform UDP communication with the module. For details, please refer to it.</p><p>Create a UDP client on the PC side as follows：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_pc_udpbroadcast_creat.png" data-origin="image/6.at_demo/sta_pc_udpbroadcast_creat.png" alt="sta_pc_udpboardcast"> </p><p>PC-side TCP/UDP test software data transceiver work area：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_pc_udpbroardcast.png" data-origin="image/6.at_demo/sta_pc_udpbroardcast.png" alt="sta_pc_udpboardcast"> </p><p>Serial debugging software data transceiver work area：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_udpbroadcast_log.png" data-origin="image/6.at_demo/sta_udpbroadcast_log.png" alt="sta_udpboardcast_log"> </p><h3 id="_4-udp-unicast"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_4-udp-unicast" data-id="_4-udp-unicast" class="anchor"><span>4) UDP unicast</span></a></h3><p>When you need the module to do UDP unicast (server) and send UDP unicast information concurrently, you can refer to the following steps.</p><h4 id="_1-udp-unicast-in-ap-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-udp-unicast-in-ap-mode" data-id="_1-udp-unicast-in-ap-mode" class="anchor"><span>(1) UDP unicast in AP mode</span></a></h4><p>In the WiFi AT command mode, a UDP client is established in the AP mode, and the module sends UDP unicast information. The specific steps are as follows (take the link 1 as an example, the link 2 method is the same):</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Set and turn on Soft_AP mode</td>
+<td align="left"><code>AT+WSAP=jenny,12345678\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">PC connects to the AP and obtains the IP address</td>
+<td align="left">PC side Wlan connects to <code>jenny</code>; PC opens cmd.exe and enters the command: <code>ipconfig</code>.</td>
+<td align="left">Successfully connect jenny, PC's IP address: 10.10.10.2</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Setup Parameters UDP Broadcast Service Parameters</td>
+<td align="left"><code>AT+CIPSTART=3,udp_unicast,10.10.10.1,20003,4003\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">PC from UDP client and connect</td>
+<td align="left">Set destination Port port number: 4003, local port number: 20003</td>
+<td align="left">Automatic connection to module successfully. <code>+CIPEVENT:2,UDP,CONNECTED</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">AT command mode, the module sends data to the UDP server through the serial port</td>
+<td align="left"><code>AT+CIPSEND=2,5\r12345</code></td>
+<td align="left">TCP client receive area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left">AT command mode, UDP client sends data to the module serial port</td>
+<td align="left">1. Send area send: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, enter the command: <code>AT+CIPRECV=1\r</code></td>
+<td align="left"><code>+CIPRECV:10,1234567890\r\ nOK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required.</td>
+<td align="left">The module serial port receives: <code>1234567890</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left">In transparent mode, the module sends data to the UDP server through the serial port</td>
+<td align="left">1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. Serial input: <code>abcdefghijklmn</code></td>
+<td align="left">PC-side UDP client received: <code>abcdefghijklmn</code></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left">Transparent mode, UDP client sends data to module serial port</td>
+<td align="left">UDP client send area input data: <code>1234567890</code></td>
+<td align="left">module serial port received: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>Create a UDP unicast connection on the PC as follows：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_pc_udpunicast_creat.png" data-origin="image/6.at_demo/ap_pc_udpunicast_creat.png" alt="ap_pc_udpunicast"> </p><p>PC-side TCP/UDP test software data transceiver work area：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_pc_udpunicast.png" data-origin="image/6.at_demo/ap_pc_udpunicast.png" alt="ap_pc_udpunicast"> </p><p>Serial debugging software data transceiver work area：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/ap_udpunicast_log.png" data-origin="image/6.at_demo/ap_udpunicast_log.png" alt="ap_udpunicast_log"> </p><h4 id="_2-udp-unicast-in-station-mode"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-udp-unicast-in-station-mode" data-id="_2-udp-unicast-in-station-mode" class="anchor"><span>(2) UDP unicast in STATION mode</span></a></h4><p>In the WiFi AT command mode, a UDP client is established in the STATION mode, and the module sends UDP unicast information. The specific steps are as follows (take the link 1 as an example, the link 2 method is the same):</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Set and start STATION mode, wait for the connection to succeed</td>
+<td align="left"><code>AT+WJAP=MX,88888880\r</code></td>
+<td align="left"><code>OK</code> <code>+WEVNET:STATION UP</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">PC connects to Willam Xu and obtains the IP address</td>
+<td align="left">PC side Wlan connects to <code>MX</code>; PC side opens cmd.exe, enter the command: <code>ipconfig</code>.</td>
+<td align="left">Successfully connected to Willam Xu, PC's IP address: 192.168.100.105</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Set the module to do UDP server-side parameters</td>
+<td align="left"><code>AT+CIPSTART=3,udp_unicast,192.168.100.105,20003,4003\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">PC from UDP client and connect</td>
+<td align="left">Set destination port Port number: 4003, local port number: 20003</td>
+<td align="left">Automatic connection with the module's udp client. <code>+CIPEVENT: 3, UDP, CONNECTED</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">AT command mode, the module sends data to the UDP client through the serial port</td>
+<td align="left"><code>AT+CIPSEND=3,5</code>, within 3 seconds, the input string: <code>12345</code></td>
+<td align="left">TCP client receiving area received: <code>12345</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left">AT command mode, UDP client sends data to the module serial port</td>
+<td align="left">1. TCP tool send area sends: <code>1234567890</code></td>
+<td align="left">Send successfully</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. If the module is not automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 0, enter the command: <code>AT+CIPRECV=1\r</code></td>
+<td align="left"><code>+CIPRECV:10,1234567890\r\ nOK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">3. If the module is automatically received to the serial port, ie: <code>AT+CIPRECVCFG</code> is set to 1, no input command is required.</td>
+<td align="left">The module serial port receives: <code>1234567890</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left">In transparent mode, the module sends data to the UDP client through the serial port</td>
+<td align="left">1. Module serial input command: <code>AT+CIPSENDRAW\r</code>;</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left">2. Serial input: <code>abcdefghijklmn</code></td>
+<td align="left">PC-side UDP client received: <code>abcdefghijklmn</code></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left">Transparent mode, UDP client sends data to module serial port</td>
+<td align="left">UDP client send area input data: <code>1234567890</code></td>
+<td align="left">module serial port received: <code>1234567890</code></td>
+</tr>
+</tbody></table>
+<p>Create a UDP unicast connection on the PC as follows：</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_pc_udpunicast_creat.png" data-origin="image/6.at_demo/sta_pc_udpunicast_creat.png" alt="sta_pc_udpunicast"> </p><p>PC-side TCP/UDP test software data transceiver work area:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_pc_udpunicast.png" data-origin="image/6.at_demo/sta_pc_udpunicast.png" alt="sta_pc_udpunicast"> </p><p>Serial debugging software data transceiver work area:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/sta_udpunicast_log.png" data-origin="image/6.at_demo/sta_udpunicast_log.png" alt="sta_udpunicast_log"> </p><h2 id="_6easylink-distribution-network"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_6easylink-distribution-network" data-id="_6easylink-distribution-network" class="anchor"><span>6.Easylink Distribution Network</span></a></h2><p>When you need to use <a href="http://docs.mxchip.com/#/docs/easylink/easylink_index" target="_blank" rel="noopener">Easylink distribution network</a> to distribute the module to the network, you can send an AT command to the module to start the distribution network. Specific examples are as follows:</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Regardless of the operating mode of the module</td>
+<td align="left"><code>AT+SMARTSTART=1\r</code></td>
+<td align="left"><code>+WEVENT:STATION_DOWN</code>, STATION disconnected</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Mobile phone open Easylink distribution network APP, enter ssid and key, start distribution network</td>
+<td align="left">----</td>
+<td align="left"><code>+WEVENT:STATION_UP</code>, distribution network success</td>
+</tr>
+</tbody></table>
+<h2 id="_7airkiss-distribution-network"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_7airkiss-distribution-network" data-id="_7airkiss-distribution-network" class="anchor"><span>7.Airkiss Distribution Network</span></a></h2><p>When the Airkiss of the WeChat public account is required to be used as a module distribution network, an AT command can be sent to the module to start the distribution network. details as follows:</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Only when the configuration command is sent, the Airkiss distribution network can discover the device</td>
+<td align="left"><code>AT+SMARTCFG=gh_420af5d2de71_9b6ee2f805e286e2, gh_420af5d2de71\r</code> (Note: The first parameter is the original ID of your WeChat public number: original_id The second parameter is the device ID generated after the product is created under the public number: device_id)</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Start Airkiss Distribution Status</td>
+<td align="left"><code>AT+SMARTSTART=2\r</code></td>
+<td align="left"><code>+WEVENT:STATION_DOWN</code>,STATION Disconnected</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Mobile phone to open your WeChat public account or scan the QR code below, enter the Airkiss matching page, enter ssid and key, start distribution network</td>
+<td align="left">----</td>
+<td align="left"><code>+WEVENT:STATION_UP</code>, distribution network success, And APP side list discovery device: Mi Ke deer</td>
+</tr>
+</tbody></table>
+<p>Airkiss distribution network test QR code:</p><p><img src="./3.Basic AT Command Usage Demo - Document_files/Airkiss.png" data-origin="image/6.at_demo/Airkiss.png" alt="airkiss_peiwang"></p><h2 id="_8get-sntp-time"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_8get-sntp-time" data-id="_8get-sntp-time" class="anchor"><span>8.Get SNTP time</span></a></h2><p>When the module is required to obtain the network synchronization time, an AT command can be sent to the module to obtain the SNTP time.</p><blockquote>
+<p>Tip: To obtain network time, the module must be connected to a router, or enable STATION mode, or Easylink distribution network is successful, or Airkiss distribution network is successful, that is, in STATION_UP state.</p></blockquote>
+<p>Specific steps are as follows:</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Module Connection Router</td>
+<td align="left">Start STATION Work Mode or Distribution Network</td>
+<td align="left"><code>+WEVENT=STATION_UP</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Configure SNTP time zone and server domain name</td>
+<td align="left"><code>AT+SNTPCFG=+8,cn.ntp.org.cn,pool.ntp.org\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Get SNTP Time</td>
+<td align="left"><code>AT+SNTPTIME\r</code></td>
+<td align="left"><code>+SNTPTIME:2017-09-05T14:33:05.022320</code> \r\n <code>OK</code></td>
+</tr>
+</tbody></table>
+<h2 id="_9get-rtc-time"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_9get-rtc-time" data-id="_9get-rtc-time" class="anchor"><span>9.Get RTC time</span></a></h2><p>When the module is required to obtain the RTC time of the module, an AT command can be sent to the module to obtain the RTC time.</p><p>Specific steps are as follows:</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">When the SNTP time synchronization is not done, the RTC time obtained is: the system running time from 0<img class="emoji" src="./3.Basic AT Command Usage Demo - Document_files/0.png" alt="0">0 on January 1, 1970</td>
+<td align="left"><code>AT+RTCGET\r</code></td>
+<td align="left"><code>+RTCGET:1970 -01-01T00:01:00.028856</code> \r\n <code>OK</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">After SNTP time synchronization, the obtained RTC time is: the standard time of the current specified time zone.</td>
+<td align="left"><code>AT+RTCGET\r</code></td>
+<td align="left">such as: <code>+RTCGET:2017-09-05T14:33:05.022320</code>\r\n <code>OK</code></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">When the system is powered off, the RTC time is not saved and will be restored to the initial time: 0<img class="emoji" src="./3.Basic AT Command Usage Demo - Document_files/00.png" alt="00">00 on January 1, 1970, and will not restart from the initial test time until power is restored again. RTCGET\r`</td>
+<td align="left"><code>+RTCGET:1970-01-01T00:01:00.090555</code> \r\n <code>OK</code></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="_10mqtt-protocol-communication-use-case"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_10mqtt-protocol-communication-use-case" data-id="_10mqtt-protocol-communication-use-case" class="anchor"><span>10.MQTT protocol communication use case</span></a></h2><h3 id="_1-implementing-mqtt-communication-with-qingke-fog-cloud"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_1-implementing-mqtt-communication-with-qingke-fog-cloud" data-id="_1-implementing-mqtt-communication-with-qingke-fog-cloud" class="anchor"><span>1) Implementing mqtt communication with Qingke Fog Cloud</span></a></h3><p>The following explains how to implement MQTT communication between the device and the Fog cloud server through AT commands, including: MQTT connection establishment, subscription topic, and publishing data.</p><blockquote>
+<p>Note: Fog Cloud Server does not require a certificate of authentication and requires SSL encryption.</p></blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send command (or operation)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Connection Router</td>
+<td align="left"><code>AT+WJAP=ssid,password\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code> ,  <code>+WEVNET:STATION UP</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Enable event push function</td>
+<td align="left"><code>AT+MQTTEVENT=ON\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Setting the MQTT username and password</td>
+<td align="left"><code>AT+MQTTAUTH=6618fdda2a4f11e7a554fa163e876164/77a0853e3a1a11e7a554fa163e876164, ibV/zzpOyHKDUVH4EEXK7RoZtJHp6GTj6fazxst2+k4=\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Set host and port number</td>
+<td align="left"><code>AT+MQTTSOCK=6618fdda2a4f11e7a554fa163e876164.mqtt.iot.gz.baidubce.com,1884\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Close MQTT certificate verification</td>
+<td align="left"><code>AT+MQTTCAVERIFY=OFF,OFF\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left">Enable SSL Encryption</td>
+<td align="left"><code>AT+MQTTSSL=ON\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left">Set Client Identifier</td>
+<td align="left"><code>AT+MQTTCID=77a0853e3a1a11e7a554fa163e876164\r\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left">Set MQTT Heartbeat Cycle</td>
+<td align="left"><code>AT+MQTTKEEPALIVE=30\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="left">Enable MQTT automatic reconnection function</td>
+<td align="left"><code>AT+MQTTRECONN=ON\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left">Enable MQTT power-on automatic connection function</td>
+<td align="left"><code>AT+MQTTAUTOSTART=ON\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left">Start MQTT Service</td>
+<td align="left"><code>AT+MQTTSTART\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:CONNECT,SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="left">Subscription theme</td>
+<td align="left"><code>AT+MQTTSUB=0,6618fdda2a4f11e7a554fa163e876164/df358c1a348611e7a554fa163e876164/77a0853e3a1a11e7a554fa163e876164/status/json,0\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>+MQTTEVENT:0,SUBSCRIBE,SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="left">Publish Settings</td>
+<td align="left"><code>AAT+MQTTPUB=6618fdda2a4f11e7a554fa163e876164/df358c1a348611e7a554fa163e876164/77a0853e3a1a11e7a554fa163e876164/status/json,0\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="left">Publish data</td>
+<td align="left"><code>AT+MQTTSEND=6\r</code>, after returning <code>&gt;</code>, enter the data: <code>123456</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Return</td>
+<td align="left"><code>+MQTTEVENT:PUBLISH,SUCCESS</code>, Receive the same data returned by the same subject at the same time: <code>+MQTTRECV:0,6,123456</code></td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="left">Unsubscribe topic</td>
+<td align="left"><code>AT+MQTTUNSUB=0\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Return</td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:0, UNSUBSCRIBE, SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td align="left">Close MQTT Service</td>
+<td align="left"><code>AT+MQTTCLOSE\r</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">Back</td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:CLOSE,SUCCESS</code></td>
+</tr>
+</tbody></table>
+<h3 id="_2-implementing-mqtt-communication-with-amazon-aws-cloud"><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B?id=_2-implementing-mqtt-communication-with-amazon-aws-cloud" data-id="_2-implementing-mqtt-communication-with-amazon-aws-cloud" class="anchor"><span>2) Implementing mqtt communication with Amazon aws cloud</span></a></h3><p>The following explains how to implement MQTT communication between a device and an AWS cloud server through the MQTT communication AT command. The server requires certificate verification, so there are three more certificate verification instructions than Fog communication. The specific process is as follows, including: MQTT connection establishment, subscription topic, and release data.</p><blockquote>
+<p>Description:</p><ol><li><p>Since Amazon provides paid services, it only provides a complete usage process and does not provide real usernames, passwords and certificates.</p></li><li><p>Users need to register the service on Amazon to obtain the relevant user name, password and certificate according to the specific product or project. [Click here to enter the Amazon aws official website] (<a href="https://aws.amazon.com/" target="_blank" rel="noopener">https://aws.amazon.com</a>).</p></li><li><p>When the user actually delivers the certificate, he must append Ctrl+Z (ASCII code is 0x1A, which is not part of the certificate) at the end of the certificate. As the end of the certificate delivery, the module will store the certificate in flash.</p></li></ol></blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Step</th>
+<th align="left">Send instruction (or operation)</th>
+<th align="left">Return (or phenomenon)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">Connection Router</td>
+<td align="left"><code>AT+WJAP=ssid,password\r</code></td>
+<td align="left"><code>OK</code> and <code>+WEVNET:STATION UP</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Enable event push function</td>
+<td align="left"><code>AT+MQTTEVENT=ON\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Set MQTT username and password</td>
+<td align="left"><code>AT+MQTTAUTH=UserName,PassWord\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Set Host and Port Number</td>
+<td align="left"><code>AT+MQTTSOCK=a1lqshc4oegz64.iot.us-west-2.amazonaws.com,8883\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Enable MQTT certificate verification</td>
+<td align="left"><code>AT+MQTTCAVERIFY=ON,ON\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left">Pass the server root certificate</td>
+<td align="left"><code>AT+SSLCERTSET=0\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left">Send server root certificate file content</td>
+<td align="left"><code>Server root certificate file content</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left">Pass client certificate</td>
+<td align="left"><code>AT+SSLCERTSET=1\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left">Send client certificate file content</td>
+<td align="left"><code>Client certificate file content</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="left">Pass client private key</td>
+<td align="left"><code>AT+SSLCERTSET=2\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left">Send client private key file content</td>
+<td align="left"><code>client private key file content</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left">Enable SSL Encryption</td>
+<td align="left"><code>AT+MQTTSSL=ON\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="left">Set Client Identifier</td>
+<td align="left"><code>AT+MQTTCID=MiCO\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="left">Set MQTT Heartbeat Cycle</td>
+<td align="left"><code>AT+MQTTKEEPALIVE=10\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="left">Turn off MQTT automatic reconnection function</td>
+<td align="left"><code>AT+MQTTRECONN=OFF\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="left">Enable MQTT power-on automatic connection function</td>
+<td align="left"><code>AT+MQTTAUTOSTART=ON\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td align="left">Start MQTT Service</td>
+<td align="left"><code>AT+MQTTSTART\r</code></td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:CONNECT,SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td align="left">Subscription theme 0</td>
+<td align="left"><code>AT+MQTTSUB=0,$aws/things/myLight/shadow/delete/accepted,1\r</code></td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:0,SUBSCRIBE,SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td align="left">Subscription theme 1</td>
+<td align="left"><code>AT+MQTTSUB=1, $aws/things/myLight/shadow/update/delta,0\r</code></td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:1,SUBSCRIBE,SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="left">Subscription theme 2</td>
+<td align="left"><code>AT+MQTTSUB=2,$aws/things/myLight/shadow/update,0\r</code></td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:2,SUBSCRIBE,SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="left">Publish Settings</td>
+<td align="left"><code>AT+MQTTPUB=$aws/things/myLight/shadow/update,0\r</code></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="left">Publish data</td>
+<td align="left"><code>AT+MQTTSEND=6\r</code>, after returning <code>&gt;</code>, enter the data: <code>123456</code></td>
+<td align="left"><code>+MQTTEVENT:PUBLISH,SUCCESS</code>, and receive the data returned by the same subject of the subscription:<code>+MQTTRECV:2,6,123456</code></td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td align="left">Unsubscribe topic 1</td>
+<td align="left"><code>AT+MQTTUNSUB=1\r</code></td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:1, UNSUBSCRIBE, SUCCESS</code></td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td align="left">Close MQTT Service</td>
+<td align="left"><code>AT+MQTTCLOSE\r</code></td>
+<td align="left"><code>OK</code> and <code>+MQTTEVENT:CLOSE,SUCCESS</code></td>
+</tr>
+</tbody></table>
+<hr>
+</article></section></main>
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      auto2top: true,
+      coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      // loadNavbar: true,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 3,
+      // ga: 'UA-106147152-1',
+    }
+  </script>
+  <style>
+    .sidebar li{
+      margin: 0;
+    }
+  </style>
+  <script src="./3.Basic AT Command Usage Demo - Document_files/docsify.min.js.download"></script>
+
+
+<div class="progress" style="opacity: 0; width: 0%;"></div></body></html>

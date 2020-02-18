@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>4.MXOS Development Board - Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="./4.MXOS Development Board - Document_files/vue.css">
+</head>
+<body data-page="docs/mxos/4.mxos_development_board.md" class="ready sticky">
+  <section class="cover" style="background: linear-gradient(to left bottom, hsl(109, 100%, 85%) 0%,hsl(18, 100%, 85%) 100%)"><div class="cover-main"><h1 id="mxchip-technical-documents-center"><a href="https://en.docs.mxchip.com/#/?id=mxchip-technical-documents-center" data-id="mxchip-technical-documents-center" class="anchor"><span>MXCHIP Technical Documents Center</span></a></h1><p>@ MXCHIP 2019</p><p>( Please Pull up for more content. )</p></div><div class="mask"></div></section><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><div class="sidebar-nav"><ul><li><p><strong><a href="https://en.docs.mxchip.com/#/docs/README">Main Page</a></strong></p></li><li><p><strong>About mxos</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxos/1.Guide">1.Guide</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/2.mxos_brief_introduction">2.MXOS Brief Introduction</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/3.mxos_components">3.MXOS Components</a></li><li class=""><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board">4.MXOS Development Board</a><ul class="app-sub-sidebar"><li class="active"><a class="section-link" href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=mxkit">MXKit</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=ext-at3080">EXT-AT3080</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=az3166">AZ3166</a></li></ul></li></ul></li></ul><ul><li><strong>Development Tools</strong><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/1.Guide">1.Guide</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/2.mxos_Cube">2.MXOS Cube</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/3.mxos_IDE">3.MXOS IDE</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/4.JTAG_debugger">4.JTAG Debugger</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/5.Serial_debug_terminal">5.Serial Debug Terminal</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/6.Third_party_driver">6.Third Party Driver</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/7.Helloworld">7.Helloworld</a></li></ul></li></ul><ul><li><p><strong>MXOS System Characteristics</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/1.Bootloader">1.Bootloader Mode</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/2.CLI">2.CLI Serial Debug Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/3.Kernel_API">3.Kernel API</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/4.Core_data">4.Core Data Management</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/5.WiFi_configuration">5.WiFi Configuration</a></li></ul></li><li><p><strong>MXOS API Description</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/0.HAL">0.Hardware Abstract Layer</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/1.Socket">1.Socket Communication</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/2.Http">2.Http Communication</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/3.Json_parsing">3.Json Format Parsing</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/4.Security_algorithm">4.Security Algorithm</a></li></ul></li><li><p><strong>WiFi／BT AT Command</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/AT/0.%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD">0.Firmware download</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/1.%E5%9B%BA%E4%BB%B6%E8%AF%B4%E6%98%8E">1.Firmware description</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E">2.Command description</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B">3.Basic AT Command Usage Demo</a></li></ul></li></ul><ul><li><strong>BLE AT Command</strong><ul><li><strong>EMB1061/EMB1060 AT</strong><ul><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/0.Firmware_download">0.Firmware Download</a></li><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/1.Firmware_description">1.Firmware Description</a></li><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/2.Command_description">2.Command Description</a></li></ul></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="development-board-which-runs-mxos"><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=development-board-which-runs-mxos" data-id="development-board-which-runs-mxos" class="anchor"><span>Development board which runs MXOS</span></a></h1><p>To enable users to quickly develop smart hardware products based on mxos, we have launched a series of development kits running mxos for IoT, intelligent hardware prototype development and Demo demonstrations.</p><p><strong>Contents</strong></p><ol><li><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=mxkit">MXKit</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=az3166">AZ3166</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=ext-at3080">EXT-AT3080</a></li></ol><h2 id="mxkit"><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=mxkit" data-id="mxkit" class="anchor"><span>MXKit</span></a></h2><p>In 2018, MXCHIP launched the MXKit series of development kits for IoT and intelligent hardware prototype development. It provides developers with an out-of-the-box smart hardware solution that makes it easy to validate users' software and features, enabling products to connect to cloud service platforms and mobile phones quickly and securely, reducing development cycles and bringing them to market quickly.</p><p>The MXKit development kit consists of four parts: MXKit-Base, MXKit-Core, MXKit-Arduino (optional), and MXKit-Sensor (optional). among them:The MXKit-Base board is a general-purpose development board with a rich peripheral interface that is compatible with all MXKit-Core boards. </p><ul><li>The MXKit-Core board is an IOT access core board that includes the MXCHIP wireless communication module;</li><li>The MXKit-Sensor board is an expansion board that contains a wide range of application sensors to facilitate rapid development of various IOT applications;</li><li>MXKit-Arduino board adopts standard Arduino interface, compatible with any MCU development board with Arduino interface, and provides IOT access function for user products with MXKit-Core board.</li></ul><p><img src="./4.MXOS Development Board - Document_files/mxkit_allparts.png" data-origin="/image/3.Obtain_development_board/mxkit_allparts.png" alt="mxkit_allparts.png"> </p><p>There are two ways to use the MXKit development kit. </p><ul><li><strong>MXKit Standalone kit:</strong> Secondary development on the MXCHIP wireless communication module, as shown below:</li></ul><p><img src="./4.MXOS Development Board - Document_files/mx_base_core_ext_up.png" data-origin="/image/3.Obtain_development_board/mx_base_core_ext_up.png" alt="mx_base_core_ext_up.png"></p><ul><li><strong>MXKit Hosted Suite:</strong> Provides IOT access to user products using modules that support AT commands (provided that the user already has a microcontroller development board with a standard Arduino interface), as shown below:</li></ul><p><img src="./4.MXOS Development Board - Document_files/mx_mcu_arduino_core_ext_up.png" data-origin="/image/3.Obtain_development_board/mx_mcu_arduino_core_ext_up.png" alt="mxmcu_aduino_core_ext_up.png"> <img src="./4.MXOS Development Board - Document_files/mx_mcu_aduino_core_ext_ce.png" data-origin="/image/3.Obtain_development_board/mx_mcu_aduino_core_ext_ce.png" alt="mxmcu_aduino_core_ext_ce.png"> </p><p>Hint: At the bottom is a Microchip microcontroller development board with a standard Arduino interface.</p><p>MXKit support wifi modules: EMW3080 and EMW3060.</p><table>
+<thead>
+<tr>
+<th align="left">Moudle</th>
+<th align="left">RF</th>
+<th align="left">Development board</th>
+<th align="left">CPU    Kernel</th>
+<th align="left">Main frequency</th>
+<th align="left">Code</th>
+<th align="left">DATA</th>
+<th align="left">RAM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://mxchip.com/productinfo/724158.html" target="_blank" rel="noopener">EMW3080B</a></td>
+<td align="left">Wi-Fi</td>
+<td align="left">mxosKit-3080B</td>
+<td align="left">MX1290</td>
+<td align="left">CM4</td>
+<td align="left">133M</td>
+<td align="left">2M</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.mxchip.com/productinfo/718997.html" target="_blank" rel="noopener">EMW3060</a></td>
+<td align="left">Wi-Fi</td>
+<td align="left">mxosKit-3060</td>
+<td align="left"><a href="https://mxchip.com/productinfo/724199.html" target="_blank" rel="noopener">MOC108</a></td>
+<td align="left">ARM9</td>
+<td align="left">120M</td>
+<td align="left">2M</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p><strong>Quick check and data download</strong></p><p>• <a href="https://en.docs.mxchip.com/docs/mxos/zip/RM0113EN_MXKit_Hardware_Manual_V1.0.pdf" target="_blank" rel="noopener">MXKit Development Kit Hardware Manual</a></p><h2 id="ext-at3080"><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=ext-at3080" data-id="ext-at3080" class="anchor"><span>EXT-AT3080</span></a></h2><p>EXT-AT3080 is a wireless module development board based on <a href="https://en.docs.mxchip.com/#/docs/AT/0.%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD">AT firmware</a>, which was launched by Shanghai Qingke (MXCHIP).The standard Arduino interface is provided to support the peripheral debugging function based on the Arduino interface while quickly adding wireless Wi-Fi communication to the legacy device master MCU.</p><p>Wireless Mode Fast EMW3080 has built-in <a href="https://en.docs.mxchip.com/#/docs/AT/0.%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD">AT Firmware</a>, supports "Basic AT command", or "direct-connected cloud AT command". Through the direct connection to the cloud [AT Directive] (docs/AT/2. Instruction Description.md), you can quickly and securely connect to various cloud service platforms. Currently, the cloud platforms that support AT Direct Direct include: <a href="https://en.docs.mxchip.com/#/docs/AT/4.%E7%9B%B4%E8%BF%9Eilop%E9%98%BF%E9%87%8C%E9%A3%9E%E7%87%95%E4%BA%91%E5%B9%B3%E5%8F%B0%E6%8C%87%E5%8D%97">Alibaba Ilop Cloud</a>, and <a href="https://en.docs.mxchip.com/#/docs/AT/5.%E7%9B%B4%E8%BF%9Egome%E5%9B%BD%E7%BE%8E%E4%BA%91%E5%B9%B3%E5%8F%B0%E6%8C%87%E5%8D%97">Gome Cloud</a>.</p><p>Development board physical diagram and Hardware Frame:</p><p><img src="./4.MXOS Development Board - Document_files/EXT3080.jpg" data-origin="image/EXT3080.jpg" alt="board">  ， <img src="./4.MXOS Development Board - Document_files/iot-at3080-block.png" data-origin="image/iot-at3080-block.png" alt="block"></p><p>EXT-AT3080 Composition：</p><p><img src="./4.MXOS Development Board - Document_files/iot-at3080-part.png" data-origin="image/iot-at3080-part.png" alt="block"></p><table>
+<thead>
+<tr>
+<th align="left">Number</th>
+<th align="left">Name</th>
+<th align="left">Function</th>
+<th align="left">Remark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Arduino interface I2C</td>
+<td align="left">Emulator programming firmware interface</td>
+<td align="left">Factory burning, users do not</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">UART - User Serial Port</td>
+<td align="left">Used for AT command communication with Wi-Fi module</td>
+<td align="left">--</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">System Status LED</td>
+<td align="left">Indicates the current network status of the Wi-Fi module</td>
+<td align="left">Fast flashing: Waiting for the network; Slow flashing: Get the distribution network information, the connection is steady: Connected to the network or disconnected</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Wireless Wi-Fi Module EMW3080</td>
+<td align="left">Networked communication via AT firmware or secondary development</td>
+<td align="left">See: <a href="http://www.mxchip.com/product/wifi_product/49" target="_blank" rel="noopener">EMW3080 Data Sheet</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Easylink distribution network button</td>
+<td align="left">Start Wi-Fi module distribution network mode</td>
+<td align="left">Short press to enter distribution network status</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Arduino Interface-Analog Port</td>
+<td align="left">Used for inputting analog signals</td>
+<td align="left">Accessing the signal of the user master MCU</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Arduino interface-power port</td>
+<td align="left">used to provide working power or external power for the board</td>
+<td align="left">Wi-Fi module working voltage DC3.3V</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Arduino interface-External reset button</td>
+<td align="left">Reset reserved port for external master MCU Note: Same as 9, BOOT is not the same port</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Arduino interface-External BOOT button</td>
+<td align="left">BOOT reserved port for external master MCU</td>
+<td align="left">Can be defined by external master MCU</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Reset button</td>
+<td align="left">Reset for Wi-Fi module</td>
+<td align="left">Short press, module reset</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">BOOT</td>
+<td align="left">Enter BOOT mode of Wi-Fi module</td>
+<td align="left">Short connection, low level; floating, high level</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">UART - Debug Serial Port</td>
+<td align="left">Used to view the running log information of the Wi-Fi module</td>
+<td align="left">--</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">SWD</td>
+<td align="left">Firmware burning for modules</td>
+<td align="left">Factory burning, user not available</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">I2C communication port</td>
+<td align="left">I2C communication port for external master MCU</td>
+<td align="left">--</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">SPI Communication Port</td>
+<td align="left">SPI Communication Port for External Master MCU</td>
+<td align="left">--</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">PWM Port</td>
+<td align="left">PWM Port for External Master MCU</td>
+<td align="left">--</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">IO port</td>
+<td align="left">IO port provided for external master MCU</td>
+<td align="left">--</td>
+</tr>
+</tbody></table>
+<p><strong>Quick check and data download</strong></p><ul><li>EXT-3080 schematic download: <a href="http://docs.mxchip.com/docs/board/pdf/EXT-AT3080-sch.pdf" target="_blank" rel="noopener">EXT-3080 schematic</a></li><li>AT command online viewing: <a href="https://en.docs.mxchip.com/#/docs/AT/1.%E5%9B%BA%E4%BB%B6%E8%AF%B4%E6%98%8E">AT firmware and AT command</a></li></ul><h2 id="az3166"><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board?id=az3166" data-id="az3166" class="anchor"><span>AZ3166</span></a></h2><p><img src="./4.MXOS Development Board - Document_files/az3166.png" data-origin="image/3.Obtain_development_board/az3166.png" alt="AZ3166开发板图片"></p><p>The AZ series development board is a development tool jointly developed by Qingke and Microsoft. It cooperates with Microsoft's series of development tools and Azure cloud services to achieve a perfect IoT development experience. </p><p>Portal: <a href="https://microsoft.github.io/azure-iot-developer-kit/" target="_blank" rel="noopener">Microsoft Developer Website</a></p><table>
+<thead>
+<tr>
+<th align="left">Moudle</th>
+<th align="left">RF</th>
+<th align="left">Development board</th>
+<th align="left">CPU    Kernel</th>
+<th align="left">Main frequency</th>
+<th align="left">Code</th>
+<th align="left">DATA</th>
+<th align="left">RAM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="http://www.mxchip.com/product/wifi_product/41" target="_blank" rel="noopener">EMW3166</a></td>
+<td align="left">Wi-Fi</td>
+<td align="left">AZ3166</td>
+<td align="left">STM32F412RG</td>
+<td align="left">CM4</td>
+<td align="left">100M</td>
+<td align="left">1M</td>
+<td align="left">2M</td>
+</tr>
+</tbody></table>
+<ul><li>128*64 dot matrix OLED display: VGM128064</li><li>RGB LED lights controlled by P9813:</li><li>Temperature and Humidity Sensor: HTS221</li><li>Atmospheric pressure sensor: LPS22HB</li><li>Bidirectional mono audio ADC/DAC: NAU88C10, microphone and 3.5mm headphone jack</li><li>Six-axis accelerometer: LSM6DSL</li><li>Geomagnetic sensor: LIS2MDL</li><li>DC motor</li><li>Two buttons, three LED indicators</li><li>DAP Link emulation debugger, support serial port debugging input and output, U disk drag and burn</li></ul><hr>
+<p>END</p></article></section></main>
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      auto2top: true,
+      coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      // loadNavbar: true,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 3,
+      // ga: 'UA-106147152-1',
+    }
+  </script>
+  <style>
+    .sidebar li{
+      margin: 0;
+    }
+  </style>
+  <script src="./4.MXOS Development Board - Document_files/docsify.min.js.download"></script>
+
+
+<div class="progress" style="opacity: 0; width: 0%;"></div></body></html>

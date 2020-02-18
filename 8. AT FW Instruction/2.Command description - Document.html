@@ -1,0 +1,3111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>2.Command description - Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="./2.Command description - Document_files/vue.css">
+</head>
+<body data-page="docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E.md" class="ready sticky">
+  <section class="cover" style="background: linear-gradient(to left bottom, hsl(26, 100%, 85%) 0%,hsl(93, 100%, 85%) 100%)"><div class="cover-main"><h1 id="mxchip-technical-documents-center"><a href="https://en.docs.mxchip.com/#/?id=mxchip-technical-documents-center" data-id="mxchip-technical-documents-center" class="anchor"><span>MXCHIP Technical Documents Center</span></a></h1><p>@ MXCHIP 2019</p><p>( Please Pull up for more content. )</p></div><div class="mask"></div></section><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><div class="sidebar-nav"><ul><li><p><strong><a href="https://en.docs.mxchip.com/#/docs/README">Main Page</a></strong></p></li><li><p><strong>About mxos</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxos/1.Guide">1.Guide</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/2.mxos_brief_introduction">2.MXOS Brief Introduction</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/3.mxos_components">3.MXOS Components</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxos/4.mxos_development_board">4.MXOS Development Board</a></li></ul></li></ul><ul><li><strong>Development Tools</strong><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/1.Guide">1.Guide</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/2.mxos_Cube">2.MXOS Cube</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/3.mxos_IDE">3.MXOS IDE</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/4.JTAG_debugger">4.JTAG Debugger</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/5.Serial_debug_terminal">5.Serial Debug Terminal</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/6.Third_party_driver">6.Third Party Driver</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxostool/7.Helloworld">7.Helloworld</a></li></ul></li></ul><ul><li><p><strong>MXOS System Characteristics</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/1.Bootloader">1.Bootloader Mode</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/2.CLI">2.CLI Serial Debug Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/3.Kernel_API">3.Kernel API</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/4.Core_data">4.Core Data Management</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxoscharacter/5.WiFi_configuration">5.WiFi Configuration</a></li></ul></li><li><p><strong>MXOS API Description</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/0.HAL">0.Hardware Abstract Layer</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/1.Socket">1.Socket Communication</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/2.Http">2.Http Communication</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/3.Json_parsing">3.Json Format Parsing</a></li><li><a href="https://en.docs.mxchip.com/#/docs/mxosapi/4.Security_algorithm">4.Security Algorithm</a></li></ul></li><li><p><strong>WiFi／BT AT Command</strong></p><ul><li><a href="https://en.docs.mxchip.com/#/docs/AT/0.%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD">0.Firmware download</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/1.%E5%9B%BA%E4%BB%B6%E8%AF%B4%E6%98%8E">1.Firmware description</a></li><li class="active"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E">2.Command description</a><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=catalogue">Catalogue</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=at-command-format">AT command format</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_1-format-description">1. Format description</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_2-command-format">2. Command format</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_3-response-message-format">3. Response message format</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=event-format">EVENT format</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=basic-at-command">Basic AT Command</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_1system-at-command">1.System AT Command</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_1-list-of-system-at-command">1. List of system AT command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atfwver">AT+FWVER</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsystime">AT+SYSTIME</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmemfree">AT+MEMFREE</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atfactory">AT+FACTORY</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atreboot">AT+REBOOT</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atflashlock">AT+FLASHLOCK</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwevent">AT+WEVENT</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipevent">AT+CIPEVENT</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atstandby">AT+STANDBY</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_2-uart-management-command">2. UART Management command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuart">AT+UART</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuartfomat">AT+UARTFOMAT</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuarte">AT+UARTE</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_3-wifi-management-command">3. WiFi Management command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwfver">AT+WFVER</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwmac">AT+WMAC</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwscanopt">AT+WSCANOPT</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwscan">AT+WSCAN</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwdhcp">AT+WDHCP</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwspip">AT+WSPIP</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsap">AT+WSAP</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsapq">AT+WSAPQ</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsaps">AT+WSAPS</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjapip">AT+WJAPIP</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjap">AT+WJAP</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjapq">AT+WJAPQ</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjaps">AT+WJAPS</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_4tcp-and-udp-communication-command">4.TCP and UDP communication command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsslcertget">AT+SSLCERTGET</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsslcertset">AT+SSLCERTSET</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipdomain">AT+CIPDOMAIN</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipautoconn">AT+CIPAUTOCONN</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstart">AT+CIPSTART</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstop">AT+CIPSTOP</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstatus">AT+CIPSTATUS</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipsend">AT+CIPSEND</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipsendraw">AT+CIPSENDRAW</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atciprecv">AT+CIPRECV</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atciprecvcfg">AT+CIPRECVCFG</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_5mqtt-communication-command">5.MQTT communication command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttauth">AT+MQTTAUTH</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsock">AT+MQTTSOCK</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttcaverify">AT+MQTTCAVERIFY</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttssl">AT+MQTTSSL</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttcid">AT+MQTTCID</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttkeepalive">AT+MQTTKEEPALIVE</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttreconn">AT+MQTTRECONN</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttautostart">AT+MQTTAUTOSTART</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttevent">AT+MQTTEVENT</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttstart">AT+MQTTSTART</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsub">AT+MQTTSUB</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttpub">AT+MQTTPUB</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsend">AT+MQTTSEND</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmattunsub">AT+MATTUNSUB</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttstatus">AT+MQTTSTATUS</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttclose">AT+MQTTCLOSE</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_6distribution-network-instructions">6.Distribution network instructions</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartstart">AT+SMARTSTART</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartstop">AT+SMARTSTOP</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartcfg">AT+SMARTCFG</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_7sntp-time-synchronization-command">7.SNTP time synchronization command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsntpcfg">AT+SNTPCFG</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsntptime">AT+SNTPTIME</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atrtcget">AT+RTCGET</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_8bt-control-command">8.BT control command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtname">AT+BTNAME</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtpasskey">AT+BTPASSKEY</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtmac">AT+BTMAC</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtdiscovery">AT+BTDISCOVERY</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtevent">AT+BTEVENT</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtstate">AT+BTSTATE</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtsend">AT+BTSEND</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtsendraw">AT+BTSENDRAW</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_9-ethernet-transparent-transmission-command">9. Ethernet transparent transmission command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atenetrawmode">AT+ENETRAWMODE</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atenetrawsend">AT+ENETRAWSEND</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_10-firmware-ota-command">10. Firmware OTA Command</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atotacheck">AT+OTACHECK</a></li><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atotastart">AT+OTASTART</a></li></ul><li><a class="section-link" href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=event-event-notification">EVENT event notification</a></li></ul></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/3.%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%94%A8%E4%BE%8B">3.Basic AT Command Usage Demo</a></li></ul></li></ul><ul><li><strong>BLE AT Command</strong><ul><li><strong>EMB1061/EMB1060 AT</strong><ul><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/0.Firmware_download">0.Firmware Download</a></li><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/1.Firmware_description">1.Firmware Description</a></li><li><a href="https://en.docs.mxchip.com/#/docs/BLEAT/1060AT/2.Command_description">2.Command Description</a></li></ul></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="at-command-description"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=at-command-description" data-id="at-command-description" class="anchor"><span>AT Command Description</span></a></h1><hr>
+<p>This article will describe in detail the grammatical format, function and use of each AT command. If not specified, an command  only applies to Wi-Fi mode.</p><p>All command are <strong>effective immediately</strong> without special command to save, <strong>AT command</strong> can be input through serial debugging programs such as super terminals, or through programming.</p><h2 id="catalogue"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=catalogue" data-id="catalogue" class="anchor"><span>Catalogue</span></a></h2><ol><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_at_command_format">AT command format</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_event%20format">EVENT format</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_basicatcommand">Basic AT Command</a><ol><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=1systematcommand">System AT Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_2uartmanagementcommand">UART Management Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_3wifimanagementcommand">Wi-Fi Management Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_4tcpandudpcommunicationcommand">TCP and UDP communication command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=5mqttcommunicationcommand">MQTT communication command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=6distributionnetworkmanagementcommand">Distribution Network Management Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_7sntptimesynchronizationcommand">SNTP Time Synchronization command </a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=8btcontrolcommand">BT Control command </a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=9ethernetpass-throughcommand">Ethernet Pass-through Command</a><strong>(only support moc108)</strong></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=10firmwareotacommand">Firmware OTA Command</a></li></ol></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=eventnotification">EVENT Notification</a></li></ol><h2 id="at-command-format"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=at-command-format" data-id="at-command-format" class="anchor"><span>AT command format</span></a></h2><p><code>AT+</code> command  adopts the command line based on ASCII code in the following format:</p><h3 id="_1-format-description"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_1-format-description" data-id="_1-format-description" class="anchor"><span>1. Format description</span></a></h3><ul><li>a) &lt;&gt;: Represents the parts that must be included</li><li>b) []: Represents the optional part</li></ul><h3 id="_2-command-format"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_2-command-format" data-id="_2-command-format" class="anchor"><span>2. Command format</span></a></h3><p><code>AT+&lt;CMD&gt;[op][para-1, para-2, para-3,...]\r</code></p><ul><li>a) <code>AT+:</code>Command message prefix</li><li>b) <code>CMD:</code> command  string</li><li>c) <code>[op]:</code>command  operator. It can be:<ul><li><ol><li><code>"=":</code>Represents parameter settings, or queries for specified parameters</li></ol></li><li><ol start="2"><li><code>"?":</code>Represents query system parameters</li></ol></li><li><ol start="3"><li><code>None':</code>Indicates the execution of command</li></ol></li><li><ol start="4"><li><code>"=?"</code>: Indicates the parameters set by the query user</li></ol></li></ul></li><li>d) <code>[para-n]:</code>Represents the set parameter value or the specified query parameter</li><li>e) <code>r</code>: Entry terminator, ASCII code 0x0D</li></ul><h3 id="_3-response-message-format"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_3-response-message-format" data-id="_3-response-message-format" class="anchor"><span>3. Response message format</span></a></h3><p><code>[\r\n][+CMD:] [para-1, para-2, para-3,...] &lt;\r\n&gt; &lt;STATUS&gt; &lt;\r\n&gt;</code></p><ul><li>a) <code>r:</code> Entry terminator, ASCII code: 0x0D</li><li>b) <code>n</code>: newline character, ASCII code: 0x0a</li><li>c) <code>[+CMD:]</code>Corresponding command string</li><li>d) <code>[para-n]</code>: Parameters returned at query time</li><li>e) <code>[STATUS]</code>There are two cases of successful execution of command:<ul><li>(1) <code>OK</code>: means correct execution;</li><li>(2) <code>ERROR</code>: Represents an execution error. </li></ul></li></ul><h2 id="event-format"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=event-format" data-id="event-format" class="anchor"><span>EVENT format</span></a></h2><p><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=eventmessage">EVENT message</a> describes the current Wi-Fi/BT function and network connection status, such as STA, AP connection status, TCP, UDP connection status, RFCOMM connection status, etc.</p><p>Event message format: <code>\r\n+&lt;TYPE&gt;：[para-1,para-2,para-2,...,para-n]\r\n</code></p><ul><li><code>&lt;TYPE&gt;</code>: Event types include <code>WEVENT</code>, which means WiFi function notification, <code>CIPEVENT</code>, which means network connection notification, and `BTEVENT', which means connection notification of BT/RFCOMM (only supported by EMW3239).</li><li><code>[para-n]</code>: Event parameters, see [EVENT Event Message] (# Event Event Message)</li><li><code>\r</code>: carriage return, ASCII code 0x0D</li><li><code>\n</code>: Line break, ASCII code 0x0a</li></ul><h2 id="basic-at-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=basic-at-command" data-id="basic-at-command" class="anchor"><span>Basic AT Command</span></a></h2><p>AT command  v2.0 mainly includes:</p><ol><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=1systematcommand">System AT Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=2uartmanagementcommand">UART Management Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=3wifimanagementcommand">Wi-Fi Management Command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=4tcp%2fudpcommunicationcommand">TCP/UDP Communication command</a></li><li><a href="https://en.docs.mxchip.com/#/5mqttcommunicationcommand">MQTT communication command</a></li><li><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=6distributionnetworkmanagementcommand">Distribution Network Management Command</a></li><li><a href="https://en.docs.mxchip.com/#/7sntpTimeSynchronizationcommand">SNTP Time Synchronization command </a></li><li><a href="https://en.docs.mxchip.com/#/8btControlcommand">BT Control command </a></li></ol><h2 id="_1system-at-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_1system-at-command" data-id="_1system-at-command" class="anchor"><span>1.System AT Command</span></a></h2><h2 id="_1-list-of-system-at-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_1-list-of-system-at-command" data-id="_1-list-of-system-at-command" class="anchor"><span>1. List of system AT command</span></a></h2><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atfwver">AT+FWVER</a></td>
+<td align="left">Query firmware version number</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsystime">AT+SYSTIME</a></td>
+<td align="left">Query system runtime</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmemfree">AT+MEMFREE</a></td>
+<td align="left">Query system remaining space size</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atfactory">AT+FACTORY</a></td>
+<td align="left">Restore Module Factory Settings</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atreboot">AT+REBOOT</a></td>
+<td align="left">Restart Module</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atflashlock">AT+FLASHLOCK</a></td>
+<td align="left">Turn FLASH lock on or off</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwevent">AT+WEVENT</a></td>
+<td align="left">Turn on or turn off event message notifications prefixed with +WEVENT</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipevent">AT+CIPEVENT</a></td>
+<td align="left">Turn on or turn off event message notifications prefixed with +CIPEVENT</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atstandby">AT+STANDBY</a></td>
+<td align="left">Entering sleep mode</td>
+</tr>
+</tbody></table>
+<h3 id="atfwver"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atfwver" data-id="atfwver" class="anchor"><span>AT+FWVER</span></a></h3><p>Function: Query firmware version number.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+FWVER?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+FWVER:&lt;fwver&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>fwver</code>: Firmware version number</td>
+</tr>
+</tbody></table>
+<h3 id="atsystime"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsystime" data-id="atsystime" class="anchor"><span>AT+SYSTIME</span></a></h3><p>Function: Query the running time of the system.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+SYSTIME?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+SYSTIME:&lt;systime&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>systime</code>: System run time, in milliseconds (ms)</td>
+</tr>
+</tbody></table>
+<h3 id="atmemfree"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmemfree" data-id="atmemfree" class="anchor"><span>AT+MEMFREE</span></a></h3><p>Function: Query the size of the system's remaining space.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+MEMFREE?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MEMFREE:&lt;storage&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>storage</code>: Storage space size, in bytes (Byte)</td>
+</tr>
+</tbody></table>
+<h3 id="atfactory"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atfactory" data-id="atfactory" class="anchor"><span>AT+FACTORY</span></a></h3><p>Function: Restore [module factory settings](/ New_AT_command/3.New_AT_factory_set.md).</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+FACTORY</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">Restart immediately and take effect</td>
+</tr>
+</tbody></table>
+<h3 id="atreboot"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atreboot" data-id="atreboot" class="anchor"><span>AT+REBOOT</span></a></h3><p>Function: Restart module.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+REBOOT</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+</tbody></table>
+<h3 id="atflashlock"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atflashlock" data-id="atflashlock" class="anchor"><span>AT+FLASHLOCK</span></a></h3><p>Function: FLASH Lock command </p><table>
+<thead>
+<tr>
+<th align="left">Query command :</th>
+<th align="left"><code>AT+FLASHLOCK?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+FLASHLOCK:&lt;mode&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to Setting command  Parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+FLASHLOCK=&lt;mode&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameters:</td>
+<td align="left"><code>mode</code>:<code>ON</code>: Open; <code>OFF</code> Close; After starting `FLASHLOCK', parameters will no longer be saved.</td>
+</tr>
+</tbody></table>
+<h3 id="atwevent"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwevent" data-id="atwevent" class="anchor"><span>AT+WEVENT</span></a></h3><p>Function: Open or close event message notification prefixed with + WEVENT.</p><table>
+<thead>
+<tr>
+<th align="left">Query command :</th>
+<th align="left"><code>AT+WEVENT?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WEVENT=&lt;state&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to Setting command  Parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+WEVENT=&lt;state&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameters:</td>
+<td align="left"><code>state</code>: <code>ON</code>, indicating that the notification function is turned on and <code>OFF</code>, indicating that the notification function is turned off.</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atcipevent"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipevent" data-id="atcipevent" class="anchor"><span>AT+CIPEVENT</span></a></h3><p>Function: Turn on or off event message notification prefixed with + CIPEVENT.</p><table>
+<thead>
+<tr>
+<th align="left">Query command :</th>
+<th align="left"><code>AT+CIPEVENT?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+CIPEVENT=&lt;state&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to Setting command  Parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+CIPEVENT=&lt;state&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>state</code>: <code>ON</code>, which means that CIPEVENT notification function is turned on and <code>OFF</code>, which means that CIPEVENT notification function is turned off.</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">Effective immediately. Note: Users must first turn off the event notification function if they adopt the "pass-through mode of work".</td>
+</tr>
+</tbody></table>
+<h3 id="atstandby"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atstandby" data-id="atstandby" class="anchor"><span>AT+STANDBY</span></a></h3><p>Function: To enter the module sleep mode, the STANDBY pin is needed to wake up. You can refer to the data manual pin definition content of the corresponding model module.</p><table>
+<thead>
+<tr>
+<th align="left">Query command :</th>
+<th align="left"><code>AT+STANDBY</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">Effective immediately. The STANDBY pin must be used to wake up in order to respond to AT command.</td>
+</tr>
+</tbody></table>
+<h2 id="_2-uart-management-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_2-uart-management-command" data-id="_2-uart-management-command" class="anchor"><span>2. UART Management command</span></a></h2><table>
+<thead>
+<tr>
+<th align="center">Serial Number</th>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuart">AT + UART</a></td>
+<td align="left">Query / Set UART Serial Port Parameters</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuartfomat">AT + UARTFOMAT</a></td>
+<td align="left">Query / Set the length and time of UART automatic trigger</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuarte">AT + UARTE</a></td>
+<td align="left">Query / Set UART Serial Port Echo Status</td>
+</tr>
+</tbody></table>
+<h3 id="atuart"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuart" data-id="atuart" class="anchor"><span>AT+UART</span></a></h3><p>Function: Query/set serial port parameters.</p><table>
+<thead>
+<tr>
+<th align="left">Query command :</th>
+<th align="left"><code>AT+UART?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>UART:&lt;baud_rate&gt;, &lt;data_bits&gt;, &lt;stop_bit&gt;, &lt;parity&gt;, &lt;flow_control&gt;]</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to Setting command  Parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+UART=&lt;baud_rate&gt;, &lt;data_bits&gt;, &lt;stop_bit&gt;, &lt;parity&gt;, &lt;flow_control&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameters:</td>
+<td align="left">`band_rate': baud rate, can be: 4800, 9600, 14400, 19200, 38400, 57600, 115200, 230400, 460800, 921600 bps</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">` Data_bits': Data bits, which can be: 7,8</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>stop_bit</code>: stop bit, can be: 1, 2</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>parity</code>: check bits can be: NONE: no check; ODD: odd check; EVEN: even check</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">` Flow_control': Flow control, can be: NONE: no flow control; CTS: enabling CTS flow control; RCS: enabling RTS flow control; CTSRTS: enabling CTSRTS flow control</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">Restart takes effect</td>
+</tr>
+</tbody></table>
+<h3 id="atuartfomat"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuartfomat" data-id="atuartfomat" class="anchor"><span>AT+UARTFOMAT</span></a></h3><p>Functions: Query/Set the trigger length and time of automatic framing (Wi-Fi/BT support)</p><table>
+<thead>
+<tr>
+<th align="left">Query command :</th>
+<th align="left"><code>AT+UARTFOMAT?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+UARTFOMAT:&lt;length&gt;, &lt;time&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to Setting command  Parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+UARTFOMAT=&lt;length&gt;, &lt;time&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">`length': automatic frame trigger length, unit: Byte, range: 1-1024, default: 1024.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>time</code>: automatic frame triggering time, unit: ms, range: 50-500, default: 100.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">In command control mode, the minimum trigger length of automatic framing is 65, which takes effect immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atuarte"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atuarte" data-id="atuarte" class="anchor"><span>AT+UARTE</span></a></h3><p>Function: Query/set whether the serial command turn on the echo function.</p><table>
+<thead>
+<tr>
+<th align="left">Query command :</th>
+<th align="left"><code>AT+UARTE?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+UARTE:&lt;option&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to Setting command  Parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+UARTE=&lt;option&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>option</code>: ON, which means to turn on echo function and OFF, which means to turn off echo function.</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h2 id="_3-wifi-management-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_3-wifi-management-command" data-id="_3-wifi-management-command" class="anchor"><span>3. WiFi Management command</span></a></h2><table>
+<thead>
+<tr>
+<th align="center">Serial number</th>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwfver">AT+WFVER</a></td>
+<td align="left">Query RF firmware version number</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwmac">AT+WMAC</a></td>
+<td align="left">Query MAC address</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwscanopt">AT + WSCANOPT</a></td>
+<td align="left">Query / Set WiFi Scan Type</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwscan">AT + WSCAN</a></td>
+<td align="left">Start WiFi scanning</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwdhcp">AT + WDHCP</a></td>
+<td align="left">Query / Set whether DHCP is enabled</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsapip">AT + WSAPIP</a></td>
+<td align="left">Query / Set IP Address, Subnet Mask and Gateway in Soft_AP Mode</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsap">AT + WSAP</a></td>
+<td align="left">Query / Set the name and password of Soft_AP mode, and start AP</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsapq">AT + WSAPQ</a></td>
+<td align="left">Close AP</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsaps">AT + WSAPS</a></td>
+<td align="left">Query the current AP status</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjapip">AT + WJAPIP</a></td>
+<td align="left">Query / Set the IP address, subnet mask and gateway in Station mode</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjap">AT + WJAP</a></td>
+<td align="left">Query / Set the AP name and password for Station mode and connect to AP</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjapq">AT + WJAPQ</a></td>
+<td align="left">Disconnect AP</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjaps">AT + WJAPS</a></td>
+<td align="left">Query the current Station connection status</td>
+</tr>
+</tbody></table>
+<h3 id="atwfver"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwfver" data-id="atwfver" class="anchor"><span>AT+WFVER</span></a></h3><p>Function: Query RF Driver Version</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+WFVER</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WFVER: &lt; fver &gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">`fver': RF firmware version</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwmac"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwmac" data-id="atwmac" class="anchor"><span>AT+WMAC</span></a></h3><p>Function: Query module MAC address</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+WMAC</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WMAC:&lt;mac&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">PARAMETER:</td>
+<td align="left"><code>mac</code>: MAC address of module</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left"><code>MAC</code> Address Format: XX: XX: XX: XX: XX: XX: XX: XX: XX. Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwscanopt"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwscanopt" data-id="atwscanopt" class="anchor"><span>AT+WSCANOPT</span></a></h3><p>Function: Query/Set WiFi Scan Type</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+WSCANOPTr</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WSCANOPT: &lt; option &gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to command  Parameter Settings</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+WSCANOPT=&lt;option&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameters:</td>
+<td align="left"><code>option</code>: 0, normal, normal scan; 1, advanced, advanced scan.</td>
+</tr>
+<tr>
+<td align="left">Explanation:</td>
+<td align="left">Normal scanning results only include SSID and signal strength, while advanced scanning results include ssid, bssid, encryption mode, channel and signal strength. Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwscan"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwscan" data-id="atwscan" class="anchor"><span>AT+WSCAN</span></a></h3><p>Function: Scan specified SSID or all AP</p><table>
+<thead>
+<tr>
+<th align="left">Scanning command for AP specifying ssid:</th>
+<th align="left"><code>AT+WSCAN=&lt;ssid&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left">If the scan type is a normal scan, i.e. option = 0, return: <code>+WSCAN:&lt;number&gt;\r\n&lt;ssid&gt;, &lt;rssi&gt;.</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">If the scan type is advanced scan, i.e. option = 1, return: <code>+WSCAN:&lt;number&gt;\rn&lt;ssid&gt;, &lt;bssid&gt;, &lt;en&gt;, &lt;channe&gt;, &lt;rssi&gt;.</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Refer to scanning all AP command  parameters.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Scan all AP command:</th>
+<th align="left"><code>AT + WSCAN</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WSCAN: &lt; number &gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>&lt; SSID &gt;, [bssid], [en], [channe], &lt; RSSI &gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">`number': Number of AP scanned. The parameters are printed in both conventional and advanced scans.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>ssid</code>: The ssid of the scanned AP. Both normal and advanced scans print this parameter</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>bssid</code>: The bssid of the scanned AP. This parameter is printed when an advanced scan.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>en</code>: The encryption method of the scanned AP. This parameter is printed when an advanced scan.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>channel</code>: The channel of the scanned AP. This parameter is printed when an advanced scan.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>rssi</code>: Signal strength of scanned APs</td>
+</tr>
+<tr>
+<td align="left">Description</td>
+<td align="left">Take effect immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwdhcp"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwdhcp" data-id="atwdhcp" class="anchor"><span>AT+WDHCP</span></a></h3><p>Function: Query / Settings Whether to enable DHCP function</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+WDHCP?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WDHCP:&lt;option&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+WDHCP=&lt;option&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>option</code>:<code>ON</code>, which means to start the DHCP function; <code>OFF</code>, which means to disable the DHCP function</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Immediately effective</td>
+</tr>
+</tbody></table>
+<h3 id="atwspip"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwspip" data-id="atwspip" class="anchor"><span>AT+WSPIP</span></a></h3><p>Function: Query / set the IP address of the module in Soft_AP mode</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+WSAPIP?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WSAPIP:&lt;ip&gt;,&lt;netmask&gt;,&lt;gateway&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+WSAPIP=&lt;ip&gt;[,&lt;netmask&gt;,&lt;gateway&gt;]</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>ip</code>: IP address of Soft_AP</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>netmask</code>: Subnet Mask</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>gateway</code>: Gateway Address</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. The factory default parameters of the module are 0.</td>
+</tr>
+</tbody></table>
+<h3 id="atwsap"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsap" data-id="atwsap" class="anchor"><span>AT+WSAP</span></a></h3><p>Function: Query/set the name and password of Soft_AP and start it.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+WSAP=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WSAP:&lt;ssid&gt;,&lt;key&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+WSAP=&lt;ssid&gt;,&lt;key&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">ssid<code>: The ssid name of</code>Soft_AP`, up to 32 bits.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>key</code>: The password for <code>Soft_AP</code>, up to 64 bits. When the length is less than 8 digits, the encryption method is: <code>OPEN</code>. When it is greater than 8 digits, the encryption method is: <code>WPA</code>.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. The module factory parameters default to 0.</td>
+</tr>
+</tbody></table>
+<h3 id="atwsapq"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsapq" data-id="atwsapq" class="anchor"><span>AT+WSAPQ</span></a></h3><p>Function: Turn off the current Soft_AP mode.</p><table>
+<thead>
+<tr>
+<th align="left">Direction:</th>
+<th align="left"><code>AT+WSAPQ</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwsaps"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwsaps" data-id="atwsaps" class="anchor"><span>AT+WSAPS</span></a></h3><p>Function: View the startup status of the current Soft_AP.</p><table>
+<thead>
+<tr>
+<th align="left">Direction:</th>
+<th align="left"><code>AT+WSAPS</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WSAPS:&lt;state&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>state</code>:<code>AP_UP</code>, indicating that <code>Soft_AP</code>; <code>AP_DOWN</code> was successfully created, indicating that <code>Soft_AP</code> is closed.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwjapip"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjapip" data-id="atwjapip" class="anchor"><span>AT+WJAPIP</span></a></h3><p>Function: Query/set the IP address of the module in Station mode.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+WJAPIP?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WJAPIP:&lt;ip&gt;,&lt;network&gt;,&lt;gateway&gt;,&lt;dns&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+WJAPIP=&lt;ip&gt;,&lt;network&gt;,&lt;gateway&gt;[,&lt;dns&gt;]</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>ip</code>: IP address of the module when doing station</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>network</code>: Subnet Mask</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>gateway</code>: Gateway Address</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>dns</code>: Domain Name</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">The module restart takes effect. When the module is not successfully connected to the AP, each parameter defaults to 0.</td>
+</tr>
+</tbody></table>
+<h3 id="atwjap"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjap" data-id="atwjap" class="anchor"><span>AT+WJAP</span></a></h3><p>Function: Query the name and password of the AP to be accessed in Station mode.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+WJAP=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WJAP:&lt;ssid&gt;,&lt;key&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>ssid</code>: AP name to be accessed in Station mode</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>key</code>: AP password to be accessed in Station mode</td>
+</tr>
+</tbody></table>
+<p>Function: Query the current WiFi connection status, including: SSID, MAC address, channel number, and signal strength of the AP that is connected.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+WJAP?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WJAP:&lt;ssid&gt;,&lt;bssid&gt;,&lt;channel&gt;,&lt;rssi&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>ssid</code>: ssid</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>bssid</code>: MAC address of the connected AP</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>channel</code>: channel number of the connected AP</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>rssi</code>: Signal strength of connected APs</td>
+</tr>
+<tr>
+<td align="left">Description</td>
+<td align="left">When the module is not successfully connected to the AP, each parameter defaults to 0.</td>
+</tr>
+</tbody></table>
+<p>Function: Set the name and password of the AP to be accessed in Station mode.</p><table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+WJAP=&lt;ssid&gt;,&lt;key&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>ssid</code>: AP name to be accessed in Station mode</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>key</code>: AP password to be accessed in Station mode</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwjapq"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjapq" data-id="atwjapq" class="anchor"><span>AT+WJAPQ</span></a></h3><p>Function: Turn off the current Station mode</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+WJAPQ</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atwjaps"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atwjaps" data-id="atwjaps" class="anchor"><span>AT+WJAPS</span></a></h3><p>Function: View the connection status of the current Station mode</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+WJAPS</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+WJAPS:&lt;state&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>state</code>:<code>STATION_UP</code>, indicating successful connection to AP; <code>STATION_DOWN</code>, indicating that the connection AP failed; <code>CONNECTING</code>, indicating that it is connecting.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">NOTE: An error code is returned when the connection is not successful. 0: represents an unknown error; 1: represents a password error; 2: represents the SSID not found</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h2 id="_4tcp-and-udp-communication-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_4tcp-and-udp-communication-command" data-id="_4tcp-and-udp-communication-command" class="anchor"><span>4.TCP and UDP communication command</span></a></h2><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Director</th>
+<th align="left">Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsslcertget">AT+SSLCERTGET</a></td>
+<td align="left">Get SSL Certificate</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsslcertset">AT+SSLCERTSET</a></td>
+<td align="left">Set SSL Certificate</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipdomain">AT+CIPDOMAIN</a></td>
+<td align="left">Domain Analysis</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipautoconn">AT+CIPAUTOCONN</a></td>
+<td align="left">Query/Setup Specify whether id connection is automatic connection</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipsslopt">AT+CIPSSLOPT</a></td>
+<td align="left">Set the ssl parameter of the specified id connection</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstart">AT+CIPSTART</a></td>
+<td align="left">Start a connection with the specified id</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstop">AT+CIPSTOP</a></td>
+<td align="left">Disconnect a specified id</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstatus">AT+CIPSTATUS</a></td>
+<td align="left">Query the connection status of the specified id</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipsend">AT+CIPSEND</a></td>
+<td align="left">Send data to the specified id connection via the serial port</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipsendraw">AT+CIPSENDRAW</a></td>
+<td align="left">Command mode jumps to transparent mode</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atciprecv">AT+CIPRECV</a></td>
+<td align="left">Receive WiFi data to user serial port</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atciprecvcfg">AT+CIPRECVCFG</a></td>
+<td align="left">Query/Setup WiFi data is sent to the user serial port, through command mode, or transparent mode</td>
+</tr>
+</tbody></table>
+<h3 id="atsslcertget"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsslcertget" data-id="atsslcertget" class="anchor"><span>AT+SSLCERTGET</span></a></h3><p>Function: Get the SSL certificate type.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+SSLCERTGET=&lt;type&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+SSLCERTGET:cert</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>type</code>:0, for the root certificate; 1, for the client certificate; 2, for the private key; 3, for the certificate revocation list</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atsslcertset"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsslcertset" data-id="atsslcertset" class="anchor"><span>AT+SSLCERTSET</span></a></h3><p>Function: Set the SSL certificate type.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+SSLCERTSET=&lt;type&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>type</code>:0, for the root certificate; 1, for the client certificate; 2, for the private key; 3, for the certificate revocation list</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. After returning <code>&gt;</code>, pass the certificate file and append <code>Ctrl+Z</code> (ASCII code is <code>0x1A</code>, which is not part of the certificate) at the end of the certificate, as the certificate delivery terminator.</td>
+</tr>
+</tbody></table>
+<h3 id="atcipdomain"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipdomain" data-id="atcipdomain" class="anchor"><span>AT+CIPDOMAIN</span></a></h3><p>Function: Domain name resolution.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+CIPDOMAIN=&lt;domain&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+CIPDOMAIN:&lt;number&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>&lt;ip&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>number</code>:Number of IP addresses</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>ip</code>:IP address</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atcipautoconn"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipautoconn" data-id="atcipautoconn" class="anchor"><span>AT+CIPAUTOCONN</span></a></h3><p>Function: Query/Set the specified id connection is automatic connection.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+CIPAUTOCONN=&lt;id&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+CIPAUTOCONN:&lt;option&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+CIPAUTOCONN=&lt;id&gt;,&lt;option&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: Specify the id number of the connection</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>option</code>: 0 means to turn off automatic connection; 1, to open automatic connection.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. The factory default is 1.</td>
+</tr>
+</tbody></table>
+<p>###AT+CIPSSLOPT
+Function: Set the SSL parameters of the specified id connection.</p><table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+CIPSSLOPT=&lt;id&gt;,&lt;isSSLRoot&gt;,&lt;isSSLClient&gt;[,isSSLCrl]</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: Specify the id number of the connection</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>isSSLRoot</code>:0, do not verify the root certificate; 1, verify the root certificate</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>isSSLClient</code>:0, does not verify the client certificate; 1, verify the client certificate</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>isSSLCrl</code>:0, do not verify the certificate revocation list; 1, verify the certificate revocation list</td>
+</tr>
+</tbody></table>
+<h3 id="atcipstart"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstart" data-id="atcipstart" class="anchor"><span>AT+CIPSTART</span></a></h3><p>Function: start a connection</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+CIPSTART=&lt;id&gt;,&lt;type&gt;,[domain],[remote_port],[local_port]</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: Specify the id number of the connection, the range: 0 - 4, that is, up to 5 connections can be created.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>tpye</code>: Connection type, including: <code>tcp_server</code>, <code>tcp_client</code>, <code>ssl_client</code>, <code>udp_broadcast</code>, <code>udp_unicast</code>. They are as follows:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">--- 1. When <code>type</code> is <code>tcp_server</code>, the parameters are: <code>id, tcp_server, local_port</code>;</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">--- 2. When <code>type</code> is <code>tcp_client</code>, the parameters are: <code>id, tcp_client, domain, remote_port[,local_port]</code>;</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">--- 3. When <code>type</code> is <code>ssl_client</code>, the parameters are: <code>id, ssl_client, domain, remote_port[,local_port]</code>;</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">--- 4. When <code>type</code> is <code>udp_broadcast</code>, the parameters are: <code>id, udp_broadcast, domain, remote_port, local_port</code>;</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">--- 5. When <code>type</code> is <code>udp_unicast</code>, the parameters are: <code>id, udp_unicast, domain, remote_port, local_port</code>.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>domain</code>: The IP or domain name of the target server. This parameter is not required when type is tcp_server.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>remote_port</code>: Remote port.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>local_port</code>: Local port. When type is tcp_client or ssl_client, this parameter is the specified local port</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. Note: If the current id connection is not closed, it will not be executed successfully when it is set and connected again. It returns: ERROR. Before changing the parameters of any id, you must manually close it, that is, execute the command: <code>AT+CIPSTOP=id\r</code> to set and connect correctly.</td>
+</tr>
+</tbody></table>
+<h3 id="atcipstop"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstop" data-id="atcipstop" class="anchor"><span>AT+CIPSTOP</span></a></h3><p>Function: Disconnect a connection with the specified id.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+CIPSTOP=&lt;id&gt;[,&lt;remote_port&gt;]</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: Specify the id number of the connection.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atcipstatus"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipstatus" data-id="atcipstatus" class="anchor"><span>AT+CIPSTATUS</span></a></h3><p>Function: Query the connection status of the specified id.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+CIPSTATUS=&lt;id&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+CIPSTATUS:&lt;type&gt;,&lt;status&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>type</code>: Specifies the connection type of id, including: tcp_server, tcp_client, udp_broadcast, udp_unicast, ssl_client.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>status</code>:start, initialize;connecting,connecting;connected,connected;disconnected,disconnected;stop,stop connection</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atcipsend"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipsend" data-id="atcipsend" class="anchor"><span>AT+CIPSEND</span></a></h3><p>Function: Send WiFi data to the user serial port.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+CIPSEND=&lt;id&gt;[,&lt;remote_port&gt;],&lt;data_length&gt;\r&lt;data&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: Specify the connection for id.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>remote_port</code>: The remote port number of the connection. You only need to specify the remote port number when the module is doing tcp server. Other socket types do not need to be specified.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>data_length</code>: Data length. Unit: byte byte.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>data</code>: Data content.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+<tr>
+<td align="left">Example:</td>
+<td align="left">AT+CIPSEND=0,54590,9\r123456789</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">AT+CIPSEND=1,9\r123456789</td>
+</tr>
+</tbody></table>
+<h3 id="atcipsendraw"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atcipsendraw" data-id="atcipsendraw" class="anchor"><span>AT+CIPSENDRAW</span></a></h3><p>Function: Jump from AT command mode to transparent mode.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+CIPSENDRAW</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atciprecv"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atciprecv" data-id="atciprecv" class="anchor"><span>AT+CIPRECV</span></a></h3><p>Function: Receive WiFi data to the user serial port.</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+CIPRECV=&lt;id&gt;,&lt;port&gt;,&lt;len&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+CIPRECV=&lt;len&gt;,&lt;data&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: Specify the connection of the id number</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>port</code>: Specify the remote port number of the connection</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>len</code>: Specified data reception length, unit: byte bytes</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>data</code>: Data</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atciprecvcfg"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atciprecvcfg" data-id="atciprecvcfg" class="anchor"><span>AT+CIPRECVCFG</span></a></h3><p>Function: Query/set the configuration parameters of the WiFi data sent to the user serial port.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+CIPRECVCFG?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+CIPRECVCFG:&lt;recv mode&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+CIPRECVCFG=&lt;recv mode&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>recv mode</code>:0, which means that the cmd command mode needs to be received by the command  <code>AT+CIPRECV</code>; 1, which means the raw transparent transmission mode, indicating automatic reception.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h2 id="_5mqtt-communication-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_5mqtt-communication-command" data-id="_5mqtt-communication-command" class="anchor"><span>5.MQTT communication command</span></a></h2><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Order</th>
+<th align="left">Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttauth">AT+MQTTAUTH</a></td>
+<td align="left">Query/Set MQTT User Authorization Information</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsock">AT+MQTTSOCK</a></td>
+<td align="left">Query/Set MQTT socket information</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttcaverify">AT+MQTTCAVERIFY</a></td>
+<td align="left">Query/Set MQTT Certificate Authentication Enable Status</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttssl">AT+MQTTSSL</a></td>
+<td align="left">Query/Set MQTT SSL Enable Status</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttcid">AT+MQTTCID</a></td>
+<td align="left">Query/Set MQTT Client Identifier</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttkeepalive">AT+MQTTKEEPALIVE</a></td>
+<td align="left">Query/Set MQTT Heartbeat Cycle</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttreconn">AT+MQTTRECONN</a></td>
+<td align="left">Query/Set MQTT Auto Reconnect Enable Status</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttautostart">AT+MQTTAUTOSTART</a></td>
+<td align="left">Query/Set MQTT Power-on Automatic Connection Enable Status</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttevent">AT+MQTTEVENT</a></td>
+<td align="left">Query/Set MQTT Event Push Enable Status</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttstart">AT+MQTTSTART</a></td>
+<td align="left">Start MQTT Service</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsub">AT+MQTTSUB</a></td>
+<td align="left">Query/Set MQTT Subscription Information</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttpub">AT+MQTTPUB</a></td>
+<td align="left">Query/Set MQTT Release Information</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsend">AT+MQTTSEND</a></td>
+<td align="left">MQTT Release Data</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttunsub">AT+MQTTUNSUB</a></td>
+<td align="left">MQTT Unsubscribe</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttstatus">AT+MQTTSTATUS</a></td>
+<td align="left">Query MQTT Status</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttclose">AT+MQTTCLOSE</a></td>
+<td align="left">Close MQTT Service</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttauth"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttauth" data-id="atmqttauth" class="anchor"><span>AT+MQTTAUTH</span></a></h3><p>Function: Query/set MQTT user authorization information.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTAUTH=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTAUTH:&lt;UserName&gt;,&lt;PassWord&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Settings:</th>
+<th align="left"><code>AT+MQTTAUTH=&lt;UserName&gt;,&lt;PassWord&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>UserName</code>: Username</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>PassWord</code>: Password</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttsock"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsock" data-id="atmqttsock" class="anchor"><span>AT+MQTTSOCK</span></a></h3><p>Function: Query/set MQTT socket information.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTSOCK=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTSOCK:&lt;Host&gt;,&lt;Port&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTSOCK=&lt;Host&gt;,&lt;Port&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Host</code>: Remote URL</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>Port</code>: Remote Port</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttcaverify"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttcaverify" data-id="atmqttcaverify" class="anchor"><span>AT+MQTTCAVERIFY</span></a></h3><p>Function: Query/set the MQTT certificate authentication enable status.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTCAVERIFY=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTCAVERIFY:&lt;Status1&gt;,&lt;Status2&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTCAVERIFY=&lt;Status1&gt;,&lt;Status2&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Status1</code>: Whether to enable server root certificate verification, <code>ON</code>: enable, <code>OFF</code>: off.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>Status2</code>: Whether to enable verification of client certificate verification, <code>ON</code>: enable, <code>OFF</code>: off.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttssl"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttssl" data-id="atmqttssl" class="anchor"><span>AT+MQTTSSL</span></a></h3><p>Function: Query/set the MQTT SSL enable status.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTSSL=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTSSL:&lt;Status&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Settings:</th>
+<th align="left"><code>AT+MQTTSSL=&lt;Status&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Status</code>: Whether to enable <code>SSL</code> encryption, <code>ON</code>: enable, <code>OFF</code>: off.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttcid"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttcid" data-id="atmqttcid" class="anchor"><span>AT+MQTTCID</span></a></h3><p>Function: Query/set the MQTT client identifier.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTCID=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTCID:&lt;ClientID&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTCID=&lt;ClientID&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>ClientID</code>: Client identifier.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttkeepalive"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttkeepalive" data-id="atmqttkeepalive" class="anchor"><span>AT+MQTTKEEPALIVE</span></a></h3><p>Function: Query/set the MQTT heartbeat cycle.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTKEEPALIVE=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTKEEPALIVE:&lt;Period&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTKEEPALIVE=&lt;Period&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Period</code>: Heartbeat period, unit: s (seconds).</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttreconn"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttreconn" data-id="atmqttreconn" class="anchor"><span>AT+MQTTRECONN</span></a></h3><p>Function: Query/set the MQTT automatic reconnection enable status.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTRECONN=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTRECONN:&lt;Status&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTRECONN=&lt;Status&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Status</code>: Whether to enable automatic reconnection. <code>ON</code>: Enable, <code>OFF</code>: Off.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttautostart"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttautostart" data-id="atmqttautostart" class="anchor"><span>AT+MQTTAUTOSTART</span></a></h3><p>Function: Query/set the MQTT power-on automatic connection enable status.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTAUTOSTART=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTAUTOSTART:&lt;Status&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTAUTOSTART=&lt;Status&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Status</code>: Whether to enable automatic connection at power-on, <code>ON</code>: enable, <code>OFF</code>: off.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttevent"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttevent" data-id="atmqttevent" class="anchor"><span>AT+MQTTEVENT</span></a></h3><p>Function: Query/set the MQTT event push enable status.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTEVENT=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTEVENT:&lt;Status&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTEVENT=&lt;Status&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Status</code>: Whether event push is enabled. <code>ON</code> is enabled; <code>OFF</code> is off.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. After this function is enabled, all MQTT events will be actively output through the serial port. The format is as follows: <code>+MQTTEVENT:&lt;result&gt;</code>.</td>
+</tr>
+<tr>
+<td align="left">The</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="atmqttstart"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttstart" data-id="atmqttstart" class="anchor"><span>AT+MQTTSTART</span></a></h3><p>Function: Start the MQTT service.</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+MQTTSTART</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttsub"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsub" data-id="atmqttsub" class="anchor"><span>AT+MQTTSUB</span></a></h3><p>Function: Query/set MQTT subscription information.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTSUB=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTSUB:&lt;sub_num&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>&lt;id_0&gt;,&lt;Topic_0&gt;,&lt;QoS_0&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">...</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>&lt;id_n&gt;,&lt;Topic_n&gt;,&lt;QoS_n&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>sub_num</code>: The number of topics to be queried, up to 6</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">The rest of the parameters refer to the setup command.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTSUB=&lt;id&gt;,&lt;Topic&gt;,&lt;QoS&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: The id number assigned to each topic, ranging from 0-5.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>Topic</code>: The subject of the subscription.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>QoS</code>: QoS of the subscription topic, ranging from 0-2.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttpub"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttpub" data-id="atmqttpub" class="anchor"><span>AT+MQTTPUB</span></a></h3><p>Function: Query/set MQTT release information.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTPUB=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTPUB:&lt;Topic&gt;,&lt;QoS&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to the setting command parameters.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+MQTTPUB=&lt;Topic&gt;,&lt;QoS&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>Topic</code>: The subject of the post.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>QoS</code>: QoS for issuing information, range: 0-2.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. This topic is only used to set topic and QoS, and use the <code>AT+MQTTSEND=&lt;len&gt;</code> Command to publish data. Before publishing data to different Topic, you need to call the <code>AT+MQTTPUB=&lt;Topic&gt;, &lt;QoS&gt;</code> command to replace the corresponding Topic and QoS.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttsend"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttsend" data-id="atmqttsend" class="anchor"><span>AT+MQTTSEND</span></a></h3><p>Function: MQTT release data</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+MQTTSEND=&lt;len&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>len</code>: The length in bytes of the published data.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. After receiving &gt;, you need to send the specified length of data to the module, and the module will release the data to the remote end.</td>
+</tr>
+</tbody></table>
+<h3 id="atmattunsub"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmattunsub" data-id="atmattunsub" class="anchor"><span>AT+MATTUNSUB</span></a></h3><p>Function: MQTT unsubscribe</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+MQTTUNSUB=&lt;id&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>id</code>: Unsubscribe the id number corresponding to the topic</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttstatus"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttstatus" data-id="atmqttstatus" class="anchor"><span>AT+MQTTSTATUS</span></a></h3><p>Function: Query the MQTT status.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+MQTTSTATUS=&lt;action&gt;[,id&gt;]</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+MQTTSTATUS:&lt;result&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>action</code>: The behavior of the client relative to the remote, including three categories: <code>connect</code>, <code>subscribe</code>, <code>publish</code>.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>id</code>: optional parameter, when the value of <code>action</code> is <code>subscribe</code>, you need to specify the id number</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>result</code>: The status result returned. According to different <code>action</code> values, a total of the following different results are included</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">1. When the value of <code>action</code> is <code>connect</code>, return:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— CONNECT, SUCCESS</code> connection success</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— CONNECT,INIT_ERROR</code> Initialization error</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— CONNECT, FAIL</code> connection failed</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— CONNECT,RECONNECTING</code> Connecting</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— CLOSE, SUCCESS</code> Closed successfully</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— CLOSE,FAIL</code> Shutdown failed</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">2. When the value of <code>action</code> is <code>subscribe</code>, return:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— SUBSCRIBE, SUCCESS</code> Subscribed successfully</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— SUBSCRIBE, FAIL</code> Subscription failed</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— UNSUBSCRIBE, SUCCESS</code> Unsubscribe successfully</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— UNSUBSCRIBE,FAIL</code> Unsubscribe failed</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">3. When the value of <code>action</code> is <code>publish</code>, return:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— PUBLISH, SUCCESS</code> Released successfully</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>—— PUBLISH,FAIL</code> Release failed</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atmqttclose"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atmqttclose" data-id="atmqttclose" class="anchor"><span>AT+MQTTCLOSE</span></a></h3><p>Function: Turn off the MQTT service</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+MQTTCLOSE</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Immediate immediately</td>
+</tr>
+</tbody></table>
+<h2 id="_6distribution-network-instructions"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_6distribution-network-instructions" data-id="_6distribution-network-instructions" class="anchor"><span>6.Distribution network instructions</span></a></h2><table>
+<thead>
+<tr>
+<th align="left">Number</th>
+<th align="left">Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartstart">AT+SMARTSTART</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartstop">AT+SMARTSTOP</a></td>
+</tr>
+</tbody></table>
+<h3 id="atsmartstart"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartstart" data-id="atsmartstart" class="anchor"><span>AT+SMARTSTART</span></a></h3><p>Function: Set the distribution mode: Easylink or Airkiss, and start the distribution network.</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+SMARTSTART=&lt;type&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>type</code>: integer type.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">1:<a href="https://en.docs.mxchip.com/#/docs/easylink/easylink_index">Easylink distribution network</a></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">2: Airkiss distribution network;</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">3: Easylink AWS distribution network.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">4: Easylink+Airkiss fusion distribution network;</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">5: SoftAP distribution network (only supports [IOS latest version of Easylink APP] (docs/easylink/page/easylink_ios.md)).</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atsmartstop"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartstop" data-id="atsmartstop" class="anchor"><span>AT+SMARTSTOP</span></a></h3><p>Function: Stop the set distribution mode.</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+SMARTSTOP=&lt;type&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>type</code>: 1: means Easylink distribution network; 2: means Airkiss distribution network; 3: means Easylink AWS distribution network.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately. Note: Parameter 3: Easylink AWS Distribution Network, this command does not work with AlinkV3 Ali Direct AT firmware.</td>
+</tr>
+</tbody></table>
+<h3 id="atsmartcfg"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsmartcfg" data-id="atsmartcfg" class="anchor"><span>AT+SMARTCFG</span></a></h3><p>Function: Set the Airkiss distribution parameters.</p><table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+SMARTCFG=&lt;device_id&gt;,&lt;original_id&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>device_id</code>: String, provided by the background when WeChat is registered.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>original_id</code>: String, provided by the background when WeChat is registered.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h2 id="_7sntp-time-synchronization-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_7sntp-time-synchronization-command" data-id="_7sntp-time-synchronization-command" class="anchor"><span>7.SNTP time synchronization command</span></a></h2><h3 id="atsntpcfg"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsntpcfg" data-id="atsntpcfg" class="anchor"><span>AT+SNTPCFG</span></a></h3><p>Function: Set the NTP domain name.</p><table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+SNTPCFG=&lt;time_zone&gt;[,&lt;domain1&gt;[,&lt;domian2&gt;]]</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>time_zone</code>: Time zone, such as Beijing: +8</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>domain1</code>: NTP server domain 1</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>domian2</code>: NTP server domain 2</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atsntptime"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atsntptime" data-id="atsntptime" class="anchor"><span>AT+SNTPTIME</span></a></h3><p>Function: Get NTP time.</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+SNTPTIME</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+SNTPTIME:&lt;time&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>time</code>: The shape is like <code>2017-09-05T13:34:35.063568</code>, indicating: The current SNTP time is September 5, 2017 13 : 34 : 35, 63568 microseconds.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atrtcget"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atrtcget" data-id="atrtcget" class="anchor"><span>AT+RTCGET</span></a></h3><p>Function: Get NTP time.</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+RTCGET</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+RTCGET:&lt;time&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>time</code>: The shape is like <code>2017-09-05T13:34:35.063568</code>, indicating: The current RTC time is September 5, 2017 13 : 34 : 35, 63,568 microseconds.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h2 id="_8bt-control-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_8bt-control-command" data-id="_8bt-control-command" class="anchor"><span>8.BT control command</span></a></h2><p>The BT Control Command only supports the Wi-Fi/BT module: EMW3239.</p><p>This section describes all AT commands that implement the Bluetooth communication and transparent transmission functions of the BT module.</p><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Order</th>
+<th align="left">Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtname">AT+BTNAME</a></td>
+<td align="left">Query/Set Classic Bluetooth Device Name</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtpasskey">AT+BTPASSKEY</a></td>
+<td align="left">Query/Set Classic Bluetooth Pairing Key</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtmac">AT+BTMAC</a></td>
+<td align="left">Query Classic Bluetooth Device Address</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtdiscovery">AT+BTDISCOVERY</a></td>
+<td align="left">Turn on/off Bluetooth to discover connectable mode</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtevent">AT+BTEVENT</a></td>
+<td align="left">Query/Set Monitor Bluetooth Events</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtstate">AT+BTSTATE</a></td>
+<td align="left">Query Bluetooth Status</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtsend">AT+BTSEND</a></td>
+<td align="left">Send specified length data</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtsendraw">AT+BTSENDRAW</a></td>
+<td align="left">Enter transparent mode</td>
+</tr>
+</tbody></table>
+<h3 id="atbtname"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtname" data-id="atbtname" class="anchor"><span>AT+BTNAME</span></a></h3><p>Function: Query/Set Classic Bluetooth device name (the device name displayed when BT is in discoverable mode).</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+BTNAME=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+BTNAME:&lt;name&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+BTNAME=&lt;name&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>name</code>: Device name when BT is in discoverable mode</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atbtpasskey"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtpasskey" data-id="atbtpasskey" class="anchor"><span>AT+BTPASSKEY</span></a></h3><p>Function: Query / Set Classic Bluetooth device pairing key</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+BTPASSKEY=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+BTPASSKEY:&lt;passkey&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+BTPASSKEY=&lt;passkey&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>passkey</code>: BT device pairing key (must be 6 digits)</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Immediately effective</td>
+</tr>
+</tbody></table>
+<h3 id="atbtmac"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtmac" data-id="atbtmac" class="anchor"><span>AT+BTMAC</span></a></h3><p>Function: Query classic Bluetooth device address</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+BTMAC=?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+BTMAC:&lt;mac&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>mac</code>: MAC address of the device, in the format <code>xx:xx:xx:xx:xx:xx</code></td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Bluetooth address does not support setting</td>
+</tr>
+</tbody></table>
+<h3 id="atbtdiscovery"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtdiscovery" data-id="atbtdiscovery" class="anchor"><span>AT+BTDISCOVERY</span></a></h3><p>Function: On/Off Classic Bluetooth can discover connectable mode</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+BTDISCOVERY=&lt;ON/OFF&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>&lt;ON&gt;</code>: Device enters to discover connectable mode</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>&lt;OFF&gt;</code>: The device cannot be found and cannot be connected</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Immediately effective</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Enter transparent mode to automatically open to discover connectable mode</td>
+</tr>
+</tbody></table>
+<h3 id="atbtevent"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtevent" data-id="atbtevent" class="anchor"><span>AT+BTEVENT</span></a></h3><p>Function: Set/Query Whether to monitor Bluetooth events (connection establishment, connection disconnection, etc.)</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+BTEVENT?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+BTEVENT:&lt;EN/DN&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+BTEVENT=&lt;EN/DN&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>EN</code>: Enable listening to Bluetooth events</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>DN</code>: Disable listening for Bluetooth events</td>
+</tr>
+<tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Immediately effective, default enabled</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">When in the command mode and enable the listen event, the received transparent data will be sent to the serial port with the <code>+BTEVENT:DATA</code> event.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">If the listen event is disabled, the received data is directly transmitted to the serial port. (Please read the corresponding event type for details)</td>
+</tr>
+</tbody></table>
+<h3 id="atbtstate"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtstate" data-id="atbtstate" class="anchor"><span>AT+BTSTATE</span></a></h3><p>Function: Query the current working status of Bluetooth
+Note: Bluetooth working status is: <code>Connected</code>, <code>Disconnected</code>, <code>Discoverable</code> three states.</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+BTSTATE?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+BTSTATE:&lt;CONNECTED/DISCONNECTED/DISCOVERABLE&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>CONNECTED</code>: RFCOMM connection has been established</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>DISCONNECTED</code>: RFCOMM connection does not exist or has been disconnected</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>DISCOVERABLE</code>: BT device is in discoverable mode</td>
+</tr>
+</tbody></table>
+<h3 id="atbtsend"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtsend" data-id="atbtsend" class="anchor"><span>AT+BTSEND</span></a></h3><p>Function: Send data in command mode</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+BTSEND=&lt;length&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>length</code>: the length of the data to be sent</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">When the user receives the <code>&gt;</code> response, the specified length of data should be sent directly through the serial port. The Bluetooth device will receive and pass the data to the connected Bluetooth host</td>
+</tr>
+<tr>
+<td align="left">Note:</td>
+<td align="left">The device internally waits for user data within the specified time after returning the <code>&gt;</code> response. If it has timed out, the device will only send data that has already been received. The timeout period is generally 6s.</td>
+</tr>
+</tbody></table>
+<h3 id="atbtsendraw"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atbtsendraw" data-id="atbtsendraw" class="anchor"><span>AT+BTSENDRAW</span></a></h3><p>Function: Enter BT transparent transmission mode</p><table>
+<thead>
+<tr>
+<th align="left">Execution command:</th>
+<th align="left"><code>AT+BTSENDRAW</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">When the device enters the transparent transmission mode, if the RFCOMM connection is not established at this time, the device automatically enters the discoverable connectable mode.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Exit mode, please enter <code>+++</code></td>
+</tr>
+</tbody></table>
+<h2 id="_9-ethernet-transparent-transmission-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_9-ethernet-transparent-transmission-command" data-id="_9-ethernet-transparent-transmission-command" class="anchor"><span>9. Ethernet transparent transmission command</span></a></h2><table>
+<thead>
+<tr>
+<th align="center">Order</th>
+<th align="left">Order</th>
+<th align="left">Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atenetrawmode">AT+ENETRAWMODE</a></td>
+<td align="left">Settings/Query Ethernet Transparent Transmission Mode Status</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atenetrawsend">AT+ENETRAWSEND</a></td>
+<td align="left">Send Ethernet Data</td>
+</tr>
+</tbody></table>
+<h3 id="atenetrawmode"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atenetrawmode" data-id="atenetrawmode" class="anchor"><span>AT+ENETRAWMODE</span></a></h3><p>Function: Set / Query Ethernet transparent transmission mode status</p><table>
+<thead>
+<tr>
+<th align="left">Query command:</th>
+<th align="left"><code>AT+ENETRAWMODE?</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+ENETRAWMODE:&lt;mode&gt;</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left">Please refer to setting command  parameters</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Setting command:</th>
+<th align="left"><code>AT+ENETRAWMODE=&lt;mode&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>OK</code></td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>mode</code>: ON: On; OFF: Off; TCP/IP related function will be invalid after starting Ethernet transparent transmission mode</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h3 id="atenetrawsend"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atenetrawsend" data-id="atenetrawsend" class="anchor"><span>AT+ENETRAWSEND</span></a></h3><p>Function: Send Ethernet data</p><table>
+<thead>
+<tr>
+<th align="left">Command:</th>
+<th align="left"><code>AT+ENETRAWSEND=&lt;data_length&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>&gt;</code> Wait for the date data of the specified length to be entered, and the input is valid within 1 minute.</td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>data_length</code>: Data length. Unit: byte byte.</td>
+</tr>
+<tr>
+<td align="left">Description:</td>
+<td align="left">Effective immediately.</td>
+</tr>
+</tbody></table>
+<h2 id="_10-firmware-ota-command"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=_10-firmware-ota-command" data-id="_10-firmware-ota-command" class="anchor"><span>10. Firmware OTA Command</span></a></h2><p>Note: All models are available from ATv2.0.3. AT firmware supports online OTA function through AT command (Note: except for the firmware of Ali ilop platform, please refer to the specific documentation for OTA function implementation).</p><h3 id="atotacheck"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atotacheck" data-id="atotacheck" class="anchor"><span>AT+OTACHECK</span></a></h3><p>Function: Query the cloud AT firmware version number.</p><table>
+<thead>
+<tr>
+<th>Query command:</th>
+<th align="left"><code>AT+OTACHECK</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Response:</td>
+<td align="left"><code>+OTACHECK:&lt;version&gt;</code></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><code>+OK</code></td>
+</tr>
+<tr>
+<td>Parameter:</td>
+<td align="left"><code>version</code>: The version number of all ota firmware in the cloud. The form is: fog_v3_AT_v2.0.4.</td>
+</tr>
+<tr>
+<td>Description:</td>
+<td align="left">The module first needs to enable STATION mode and successfully connect to the AP to execute this command.</td>
+</tr>
+<tr>
+<td><strong>Note</strong>：</td>
+<td align="left"><strong>AT2.x firmware, starting with v2.0.3, supports remote networking OTA functionality.</strong></td>
+</tr>
+</tbody></table>
+<h3 id="atotastart"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=atotastart" data-id="atotastart" class="anchor"><span>AT+OTASTART</span></a></h3><p>Function: Update the AT firmware with the specified version number.</p><table>
+<thead>
+<tr>
+<th align="left">Update Command:</th>
+<th align="left"><code>AT+OTASTART=&lt;version&gt;</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Response:</td>
+<td align="left"><code>+OK</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>+OTAEVENT:START</code> indicates the start of the OTA process.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>+OTAEVENT:SUCCESS</code> indicates that the OTA was successful.</td>
+</tr>
+<tr>
+<td align="left">Parameter:</td>
+<td align="left"><code>version</code>: The version number of all ota firmware in the cloud. The form is: fog_v3_AT_v2.0.4.</td>
+</tr>
+<tr>
+<td align="left">Description</td>
+<td align="left">Users can update the firmware of the specified version number as needed, and can be updated to a lower version or to a higher version. And the OTA process must ensure that the continuous networking is not broken, otherwise the update may fail. The process lasts for a few seconds to about 10 seconds. After the OTA is successful, the device automatically restarts.</td>
+</tr>
+</tbody></table>
+<h2 id="event-event-notification"><a href="https://en.docs.mxchip.com/#/docs/AT/2.%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E?id=event-event-notification" data-id="event-event-notification" class="anchor"><span>EVENT event notification</span></a></h2><p>Depending on the features, EVENT event notifications include:</p><ol><li>+WEVNET Start: Represents event messages related to the WiFi function.</li><li>+CIPEVENT Start: Represents an event message related to the network connection function.</li><li>+MQTTEVENT Start: Represents an event message related to MQTT communication.</li><li>+BTEVENT Start: Represents event messages related to classic Bluetooth passthrough.</li><li>+ENETEVENT Start: Represents the time message associated with the Ethernet function.</li><li>+OTA Start: Represents an event message related to the OTA process.</li><li>+ILOP Start: Represents an event message related to the ILOP connection status.</li><li>+GOME Start: Represents an event message related to the GOME connection status.</li></ol><table>
+<thead>
+<tr>
+<th align="center">Serial</th>
+<th align="left">Event Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>Class 1</strong></td>
+<td align="left"><strong>WiFi notification</strong></td>
+<td align="left"><strong>WiFi status</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+WEVENT:AP_UP</code></td>
+<td align="left">Soft_AP created successfully</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><code>+WEVENT:AP_DOWN</code></td>
+<td align="left">Soft_AP creation failed</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><code>+WEVENT:STATION_UP</code></td>
+<td align="left">STATION Connection success</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><code>+WEVENT:STATION_DOWN</code></td>
+<td align="left">STATION Connection failed</td>
+</tr>
+<tr>
+<td align="center"><strong>Class 2</strong></td>
+<td align="left"><strong>Network Notification</strong></td>
+<td align="left"><strong>Network Connection Status</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+CIPEVENT: id, SERVER, CONNECTED</code></td>
+<td align="left">successfully connected to the TCP server with the specified id link</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><code>+CIPEVENT:id,SERVER,DISCONNECTED</code></td>
+<td align="left">Disconnected from TCP server with link number id</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><code>+CIPEVENT: id, SERVER, CLOSED</code></td>
+<td align="left">Successfully stop the TCP server with the specified id link</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><code>+CIPEVENT: CLIENT, CONNECTED, ip, port</code></td>
+<td align="left">TCP client successfully connected to the ip address and port port</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><code>+CIPEVENT:CLIENT,CLOSED,ip,port</code></td>
+<td align="left">Successfully stop the TCP client for the ip address and port port</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><code>+CIPEVENT: id, UDP, CONNECTED</code></td>
+<td align="left">UDP connection success</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left"><code>+CIPEVENT: id, UDP, CLOSED</code></td>
+<td align="left">UDP connection failed</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left"><code>+CIPEVENT:SOCKET,id,len,data</code></td>
+<td align="left">Identifies network data sources</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left"><code>+CIPEVENT: UDP_BROADCAST, ip, port, id, len, data</code></td>
+<td align="left">UDP broadcast data source and information, supported from ATv 2.0.3.</td>
+</tr>
+<tr>
+<td align="center"><strong>Class 3</strong></td>
+<td align="left"><strong>MQTT notification</strong></td>
+<td align="left"><strong>MQTT communication status</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+MQTTEVENT: CONNECT, SUCCESS</code></td>
+<td align="left">Successful connection to MQTT server</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><code>+MQTTEVENT: CONNECT,INIT_ERROR</code></td>
+<td align="left">Connection initialization error with MQTT server</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><code>+MQTTEVENT: CONNECT,FAIL</code></td>
+<td align="left">Failed to connect to MQTT server</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><code>+MQTTEVENT:CONNECT,RECONNECTING</code></td>
+<td align="left">Reconnect with MQTT server</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><code>+MQTTEVENT:CLOSE,SUCCESS</code></td>
+<td align="left">MQTT communication closed successfully</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><code>+MQTTEVENT:CLOSE,FAIL</code></td>
+<td align="left">MQTT communication shutdown failed</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="left"><code>+MQTTEVENT:SUBSCRIBE,SUCCESS</code></td>
+<td align="left">MQTT subscription success</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="left"><code>+MQTTEVENT:SBUSCRIBE,FAIL</code></td>
+<td align="left">MQTT subscription failed</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="left"><code>+MQTTEVENT: UNSUBSCRIBE,SUCCESS</code></td>
+<td align="left">MQTT unsubscribe success</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="left"><code>+MQTTEVENT: UNSUBSCRIBE,FAIL</code></td>
+<td align="left">MQTT Unsubscribe failed</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left"><code>+MQTTEVENT:PUBLISH,SUCCESS</code></td>
+<td align="left">MQTT released successfully</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left"><code>+MQTTEVENT:PUBLISH,FAIL</code></td>
+<td align="left">MQTT release failed</td>
+</tr>
+<tr>
+<td align="center"><strong>Class 4</strong></td>
+<td align="left"><strong>BT Notification</strong></td>
+<td align="left"><strong>BT Communication Status</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+BTEVENT:CONNECTION,ON</code></td>
+<td align="left">Successful connection to RFCOMM remote host</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><code>+BTEVENT:CONNECTION,OFF</code></td>
+<td align="left">Disconnected from RFCOMM remote host</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><code>+BTEVENT:DATA,length</code></td>
+<td align="left">Received data from RFCOMM remote host</td>
+</tr>
+<tr>
+<td align="center"><strong>Class 5</strong></td>
+<td align="left"><strong>Ethernet Transparent Notification</strong></td>
+<td align="left"><strong>Ethernet Transparent Event</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+ENETEVENT: len,data</code></td>
+<td align="left">Identifies Ethernet transparent data</td>
+</tr>
+<tr>
+<td align="center"><strong>Class 6</strong></td>
+<td align="left"><strong>OTA notifications</strong></td>
+<td align="left"><strong>OTA status</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+OTAEVENT:START</code></td>
+<td align="left">Start OTA firmware update process</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><code>+OTAEVENT:SUCCESS</code></td>
+<td align="left">OTA Firmware Update Successful</td>
+</tr>
+<tr>
+<td align="center"><strong>Class 7</strong></td>
+<td align="left"><strong>ILOP event notification</strong></td>
+<td align="left"><strong>ILOP connection status</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+ILOPEVENT=ILOP,TSL_THING</code></td>
+<td align="left">When mode=2, the module requests the thing model</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><code>+ILOPEVENT=ILOP,&lt;status&gt;</code></td>
+<td align="left">Connect to server status. Status: CLOUD_CONNECT: server connection is successful; LOCAL_CONNECT: LAN control connection; CLOUD_DISCONNECT: server disconnection; CLOUD_DISCONNECT: LAN control disconnection</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><code>+ILOPEVENT=SETICA,&lt;method&gt;,&lt;key&gt;,&lt;value&gt;</code></td>
+<td align="left">Submit ICA standard data, parameters with AT+ILOPSENDICA command parameters</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><code>+ILOPEVENT=SETRAW,&lt;date_len&gt;,&lt;data&gt;</code></td>
+<td align="left">Imitate transparent/custom protocol data</td>
+</tr>
+<tr>
+<td align="center"><strong>Class 8</strong></td>
+<td align="left"><strong>GOME event notification</strong></td>
+<td align="left"><strong>GOME connection status</strong></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><code>+GOMEEVENT: GOME, CONNECTING</code></td>
+<td align="left">Server Connection</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><code>+GOMEEVENT: GOME, CONNECTED</code></td>
+<td align="left">Server connection success</td>
+</tr>
+</tbody></table>
+</article></section></main>
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      auto2top: true,
+      coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      // loadNavbar: true,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 3,
+      // ga: 'UA-106147152-1',
+    }
+  </script>
+  <style>
+    .sidebar li{
+      margin: 0;
+    }
+  </style>
+  <script src="./2.Command description - Document_files/docsify.min.js.download"></script>
+
+
+<div class="progress" style="opacity: 0; width: 0%;"></div></body></html>
